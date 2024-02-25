@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-container {
+    position: sticky;
+    top: 0; /* Adjust this value as needed */
+    z-index: 10; /* Ensure it stays on top of other content */
+}
