@@ -21,6 +21,12 @@ const nextConfig = {
         permanent: false,
         basePath: false,
       },
+      {
+        source: "/latest",
+        destination: "https://ournetwork.substack.com",
+        permanent: false,
+        basePath: false,
+      },
     ];
   },
 };
