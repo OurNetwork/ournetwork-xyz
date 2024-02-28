@@ -1,7 +1,7 @@
 export default async function Mission() {
   return (
     <>
-      <div className="bg-zinc-100 h-full w-full py-8 flex flex-col justify-between font-light px-4 lg:px-16">
+      <div className="bg-zinc-100 min-h-full w-full py-8 flex flex-col justify-between font-light px-4 lg:px-16">
         {/* header and ecosystem diagram */}
         <div className="flex-col justify-center space-y-8">
           <div className="mx-auto text-center max-w-4xl text-xl lg:text-3xl font-sans tracking-wider">The leading community-powered crypto analytics platform</div>

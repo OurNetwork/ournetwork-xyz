@@ -8,7 +8,7 @@ export default async function Contributors() {
 
   return (
     <>
-      <div className="lg:h-full w-full space-y-4">
+      <div className="lg:h-full w-full space-y-4 mt-2">
         {/* header and button */}
         <div className="flex justify-between items-center px-4 py-4 lg:py-0">
           <div className="text-xl lg:text-3xl">Contributor Leaderboard</div>

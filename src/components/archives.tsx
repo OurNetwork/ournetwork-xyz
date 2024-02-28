@@ -102,7 +102,7 @@ export default function Archives({ archives }: { archives: any[] }) {
   return (
     <>
       <VisitPopup />
-      <div className="hidden lg:block lg:flex lg:overflow-x-auto lg:space-x-4 h-full lg:w-[calc(100vw-324px)]">
+      <div className="hidden lg:block lg:flex lg:overflow-x-auto lg:space-x-4 h-full lg:w-[calc(100vw-324px)] overflow-y-hidden">
         {filteredArchives.map((archive: any, index: number) => {
           let color = colorGradients[archive.editionNo % 5];
           let bottomPosition = index % 2 === 0 ? { bottom: "38px", left: "24px", right: "0" } : { bottom: "72px", left: "100px", right: "0" };

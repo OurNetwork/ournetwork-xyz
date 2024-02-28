@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <MobileNav />
       <div className="flex max-h-screen">
         <LeftSidebar />
-        <section className="flex min-h-[90vh] lg:min-h-screen flex-1 flex-col px-2 py-3 lg:py-8 lg:pr-4">
+        <section className="flex min-h-[calc(100vh-75px)] lg:min-h-[90vh] lg:min-h-screen flex-1 flex-col px-2 py-3 lg:py-8 lg:pr-4">
           <div className="w-full h-full">{children}</div>
         </section>
       </div>
