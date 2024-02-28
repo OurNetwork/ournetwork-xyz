@@ -57,9 +57,9 @@ const MobileNav = () => {
             <div className="absolute bottom-0 left-0 py-8 px-8">
               <Image src="/assets/blocks/small-2.webp" alt="yellow blocks" width={84} height={51} priority />
             </div>
-            <div className="relative">
-              <div className="text-lg tracking-[0.2em] text-blue mb-6">Join OurNetwork</div>
-              <div className="space-y-2 mb-14 text-sm">
+            <div className="relative mb-4">
+              <div className="text-xl tracking-[0.2em] text-blue mb-4 lg:mb-6">Join OurNetwork</div>
+              <div className="lg:space-y-2 mb-4 lg:mb-14">
                 <div>{`The industry's leading onchain data newsletter.`}</div>
                 <div>By the Community.</div>
                 <div>For the Community.</div>

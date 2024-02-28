@@ -6,7 +6,7 @@ export default async function Community() {
   const { teamMembers } = await getContent();
 
   return (
-    <div className="lg:pb-8">
+    <div className="pb-4 lg:pb-8">
       <div className="bg-zinc-100 w-full py-8 flex flex-col justify-between font-light px-4 lg:px-16">
         {/* trusted by */}
         <div>
