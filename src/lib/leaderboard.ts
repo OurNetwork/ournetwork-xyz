@@ -13,20 +13,25 @@ export const getLeaderboard = cache(async (): Promise<Contributor[]> => {
     .base(process.env.AIRTABLE_BASE_ID as string)
     .table(process.env.AIRTABLE_TABLE_ID as string)
     .select({
-      fields: ["Name", "Total Submissions", "Twitter handle"],
-      sort: [{ field: "Total Submissions", direction: "desc" }],
+      fields: ["Name", "Total Submissions", "Twitter handle", "Last Featured on"],
+      sort: [
+        { field: "Total Submissions", direction: "desc" },
+        { field: "Last Featured on", direction: "desc" },
+      ],
     })
     .all();
 
   const leaderboard = records
     .map((record) => {
-      const name = record.fields["Name"] as string;
-      const twitterHandle = record.fields["Twitter handle"] as string;
-      const totalSubmissions = record.fields["Total Submissions"] as number;
+      const name = typeof record.fields["Name"] === "string" ? record.fields["Name"] : "";
+      const twitterHandle = typeof record.fields["Twitter handle"] === "string" ? record.fields["Twitter handle"] : "";
+      const totalSubmissions = typeof record.fields["Total Submissions"] === "number" ? record.fields["Total Submissions"] : 0;
+
+      const formattedTwitterHandle = twitterHandle ? twitterHandle.slice(1) : "";
 
       return {
         name,
-        twitterHandle,
+        twitterHandle: formattedTwitterHandle,
         totalSubmissions,
       };
     })

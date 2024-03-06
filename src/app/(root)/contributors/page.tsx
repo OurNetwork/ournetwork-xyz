@@ -33,7 +33,7 @@ export default async function Contributors() {
               <div className="w-3/4 text-center lg:pr-24">Name</div>
             </div>
             <div className="col-span-4 lg:col-span-6 flex justify-end lg:pr-28">
-              <div className="w-56 text-center">Posts</div>
+              <div className="w-56 text-center">Points</div>
             </div>
           </div>
           {/* table body */}
@@ -73,12 +73,12 @@ export default async function Contributors() {
                         <div className="w-3/12 lg:w-1/4 text-center text-xl">{index === 0 ? "👑" : index === 1 ? "🥈" : index === 2 ? "🥉" : ""}</div>
                         <div className="w-8/12 lg:w-3/4 flex items-center">
                           {contributor.name}
-                          <a className="hidden lg:block hover:cursor-pointer min:w-[20px]" target="_blank" href={`https://x.com/${contributor.twitterHandle.slice(1)}`}>
+                          <a className="hidden lg:block hover:cursor-pointer min:w-[20px]" target="_blank" href={`https://x.com/${contributor.twitterHandle}`}>
                             <Image src={"/assets/socials/x.webp"} alt={"x link"} width={15} height={15} className="ml-2 lg:ml-4 bg-zinc-100" />
                           </a>
                         </div>
                         <div className="block lg:hidden w-1/12  pt-1 ">
-                          <a className="hover:cursor-pointer flex justify-end" target="_blank" href={`https://x.com/${contributor.twitterHandle.slice(1)}`}>
+                          <a className="hover:cursor-pointer flex justify-end" target="_blank" href={`https://x.com/${contributor.twitterHandle}`}>
                             <Image src={"/assets/socials/x.webp"} alt={"x link"} width={15} height={15} className="ml-2 lg:ml-4 bg-zinc-100" />
                           </a>
                         </div>
