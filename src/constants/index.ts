@@ -248,7 +248,7 @@ export const readers: Readers[] = [
 
 export const siteMetadata = {
   title: "OurNetwork - Crypto, NFT, DeFi & Web3 Analytics✨",
-  description: "The Leading Crypto Analytics Newsletter & Community.",
+  description: "The Leading Onchain Analytics Newsletter & Community.",
   baseUrl: "https://ournetwork.xyz",
   name: "OurNetwork",
 };
