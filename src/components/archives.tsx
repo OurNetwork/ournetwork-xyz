@@ -129,7 +129,7 @@ export default function Archives({ archives }: { archives: any[] }) {
                     <div className="text-sm">{archive.date}</div>
                   </div>
                   <div className="px-6 space-y-4">
-                    <div className="text-sm font-light h-28">
+                    <div className="text-sm font-light h-56">
                       {archive.coverageList.map((item: string, index: number) => {
                         return (
                           <div className="ml-4 -indent-4" key={index}>
