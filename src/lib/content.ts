@@ -1,5 +1,5 @@
 import "server-only";
-import { Archive, TeamMember } from "@/types";
+import { Archive, ContributorCalendar, TeamMember } from "@/types";
 import GhostContentAPI from "@tryghost/content-api";
 import { cache } from "react";
 import { cleanTitle, convertDateFormat, getCoverageList, getONSeries } from "./utils";
@@ -49,6 +49,7 @@ export const getContent = cache(async (): Promise<any> => {
 
   let archives: Archive[] = [];
   let teamMembers: TeamMember[] = [];
+  let contributorCalendar: ContributorCalendar[] = [];
 
   for (const post of archivesRaw) {
     if (post.primary_tag?.slug === "newsletter") {
@@ -79,10 +80,19 @@ export const getContent = cache(async (): Promise<any> => {
         position,
         x,
       } as TeamMember);
+    } else if (post.primary_tag?.slug === "contributor-calendar") {
+      const date = convertDateFormat(post.published_at as string);
+
+      contributorCalendar.push({
+        title: post.title,
+        image: post.feature_image,
+        date,
+      } as ContributorCalendar);
     }
   }
 
   archives = archives.sort((a, b) => (a.editionNo as number) - (b.editionNo as number)).reverse();
+  contributorCalendar = contributorCalendar.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  return { archives, teamMembers };
+  return { archives, teamMembers, contributorCalendar };
 });

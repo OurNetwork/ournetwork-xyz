@@ -41,6 +41,11 @@ export interface TeamMember {
   x: string;
 }
 
+export interface ContributorCalendar {
+  title: string;
+  image: string;
+  date: string;
+}
 export interface Organization {
   name: string;
   logo: string;

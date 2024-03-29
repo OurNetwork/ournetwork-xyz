@@ -23,7 +23,6 @@ const MobileNav = () => {
         <SheetContent side="left" className="border-none bg-white font-mono flex flex-col justify-between h-full">
           <div>
             <Image src="/assets/brand/OurNetwork.webp" alt="OurNetwork" width={200} height={80} priority />
-
             <div className="pt-8 pb-4 mb-4 space-y-2 border-b-[2px]">
               {sidebarLinks.map((item) => {
                 const isActive = (pathname.includes(item.route) && item.route.length > 1) || pathname === item.route;

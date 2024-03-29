@@ -21,6 +21,10 @@ export const sidebarLinks: SidebarLink[] = [
     route: "/mission",
     label: "Mission",
   },
+  {
+    route: "/calendar",
+    label: "Calendar",
+  },
 ];
 
 export const socialLinks: SocialLink[] = [

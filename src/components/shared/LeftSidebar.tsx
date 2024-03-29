@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useSearch } from "@/context/SearchContext";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const CustomSubstackEmbed = ({ height = "100px" }) => {
   useEffect(() => {
@@ -78,16 +79,19 @@ const LeftSidebar = () => {
               </div>
             )}
           </div>
-          <div className="flex items-center px-2 space-x-4">
-            {socialLinks.map((item) => {
-              return (
-                <div key={item.label}>
-                  <Link href={item.url} target="_blank">
-                    <Image src={item.icon} alt={item.label} width={20} height={20} />
-                  </Link>
-                </div>
-              );
-            })}
+          <div className="flex w-full justify-between">
+            <div className="flex items-center px-2 space-x-4">
+              {socialLinks.map((item) => {
+                return (
+                  <div key={item.label}>
+                    <Link href={item.url} target="_blank">
+                      <Image src={item.icon} alt={item.label} width={20} height={20} />
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+            <ThemeToggle />
           </div>
         </div>
         {/* bottom part */}
