@@ -158,7 +158,7 @@ export default function Archives({ archives }: { archives: any[] }) {
             <div key={index} className="bg-zinc-100">
               <a className="group w-full hover:shadow-xl bg-red-200" href={getArchiveURL(archive.slug)}>
                 <div className="absolute top-0 relative h-2">
-                  <LegacyImage src={color.gradient} alt="gradient header" layout="fill" priority unoptimized />
+                  <LegacyImage src={color.gradient} alt="gradient header" layout="fill" priority />
                 </div>
 
                 <div className="px-2 pt-6 pb-2 relative">

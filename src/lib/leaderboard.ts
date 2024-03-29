@@ -35,7 +35,7 @@ export const getLeaderboard = cache(async (): Promise<Contributor[]> => {
         totalSubmissions,
       };
     })
-    .filter((record) => record.name);
+    .filter((record) => record.name && record.totalSubmissions > 0);
 
   return leaderboard;
 });
