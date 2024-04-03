@@ -28,11 +28,11 @@ export const sidebarLinks: SidebarLink[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  {
-    label: "X",
-    url: "https://x.com/ournetwork__",
-    icon: "/assets/socials/x.webp",
-  },
+  // {
+  //   label: "X",
+  //   url: "https://x.com/ournetwork__",
+  //   icon: "/assets/socials/x.webp",
+  // },
   {
     label: "Zora",
     url: "https://zora.co/collect/zora:0xaa3d163986e495d13e37b9194961ed62d132ac50",
@@ -42,24 +42,24 @@ export const socialLinks: SocialLink[] = [
 
 export const colorGradients: ColorSet[] = [
   {
-    gradient: "/assets/blocks/gradient-1.webp",
-    block: "/assets/blocks/big-1.webp",
+    gradient: "/assets/blocks/gradient-1.png",
+    block: "/assets/blocks/big-1.png",
   },
   {
-    gradient: "/assets/blocks/gradient-2.webp",
-    block: "/assets/blocks/big-2.webp",
+    gradient: "/assets/blocks/gradient-2.png",
+    block: "/assets/blocks/big-2.png",
   },
   {
-    gradient: "/assets/blocks/gradient-3.webp",
-    block: "/assets/blocks/big-3.webp",
+    gradient: "/assets/blocks/gradient-3.png",
+    block: "/assets/blocks/big-3.png",
   },
   {
-    gradient: "/assets/blocks/gradient-4.webp",
-    block: "/assets/blocks/big-4.webp",
+    gradient: "/assets/blocks/gradient-4.png",
+    block: "/assets/blocks/big-4.png",
   },
   {
-    gradient: "/assets/blocks/gradient-5.webp",
-    block: "/assets/blocks/big-5.webp",
+    gradient: "/assets/blocks/gradient-5.png",
+    block: "/assets/blocks/big-5.png",
   },
 ];
 

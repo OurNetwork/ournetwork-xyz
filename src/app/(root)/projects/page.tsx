@@ -4,7 +4,7 @@ import Link from "next/link";
 export default async function Projects() {
   return (
     <>
-      <div className="bg-zinc-100 min-h-full w-full py-8 flex flex-col justify-between font-light">
+      <div className="bg-zinc-100 dark:bg-direWolf min-h-full w-full py-8 flex flex-col justify-between font-light">
         <div>
           <div className="mx-auto text-center max-w-4xl text-xl lg:text-3xl font-sans tracking-wider">
             Partnering with projects to build the first community powered research platform
@@ -25,7 +25,7 @@ export default async function Projects() {
             <div className="text-lg lg:text-2xl font-medium">
               <div>Get Involved.</div>
               <div>
-                Reach out to be featured in an <span className="text-blue">Ecosystem Issue</span>.
+                Reach out to be featured in an <span className="text-blue dark:text-lightBlue">Ecosystem Issue</span>.
               </div>
             </div>
             <div className="flex items-center justify-center">

@@ -37,8 +37,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <ThemeProvider>
-        <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} bg-white dark:bg-black`}>
+      <ThemeProvider attribute="class" defaultTheme="light">
+        <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} bg-white dark:bg-black transition-background ease-in-out duration-100`}>
           <SearchProvider>{children}</SearchProvider>
           <GoogleAnalytics gaId="G-1S3Q8FQ7VC" />
         </body>

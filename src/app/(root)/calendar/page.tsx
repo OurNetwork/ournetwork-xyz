@@ -21,7 +21,10 @@ export default async function Calendar() {
           </Link>
         </div>
         {/* table body */}
-        <div className="bg-zinc-100 w-full flex justify-center text-sm lg:text-lg tracking-widest px-1  overflow-y-auto" style={{ maxHeight: "calc(100vh - 126px)" }}>
+        <div
+          className="bg-zinc-100 dark:bg-direWolf w-full flex justify-center text-sm lg:text-lg tracking-widest px-1  overflow-y-auto"
+          style={{ maxHeight: "calc(100vh - 126px)" }}
+        >
           <img src={contributorCalendar[0].image} alt="calendar" className="w-full max-w-7xl h-full" style={{ maxHeight: "calc(100vh - 128px)" }} />
         </div>
       </div>
