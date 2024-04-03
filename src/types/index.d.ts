@@ -55,3 +55,11 @@ export interface Readers {
   label: string;
   organizations: Organization[];
 }
+
+export interface Testimonials {
+  name: string;
+  link: string;
+  company: string;
+  image: string;
+  comment: string;
+}
