@@ -46,13 +46,12 @@ export default async function Community() {
         <div>
           <div className="mx-auto w-full h-[1px] bg-gray mt-8 mb-4"></div>
           <div className="w-full text-left text-xl font-sans tracking-widest">Testimonials</div>
-          <div className=" gap-x-24 flex flex-col md:flex-row w-full">
+          <div className=" gap-x-16 flex flex-col md:flex-row w-full">
             <div className="flex-1 flex flex-col my-auto md:divide-y divide-slate-400">
               {testimonials.slice(0, 3).map((testimonial, idx) => (
                 <Testimonial {...testimonial} key={idx} />
               ))}
             </div>
-            {/* <div className="w-full h-[1px] bg-slate-400"></div> */}
             <div className="flex-1 flex flex-col md:ml-4 md:divide-y divide-slate-400">
               {testimonials.slice(3).map((testimonial, idx) => (
                 <Testimonial {...testimonial} key={idx} />
