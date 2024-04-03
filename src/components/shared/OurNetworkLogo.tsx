@@ -4,5 +4,10 @@ import { useTheme } from "next-themes";
 
 export const OurNetworkLogo = ({ width, height }) => {
   const { theme } = useTheme();
-  return <Image src={`/assets/brand/OurNetwork${theme === "dark" ? "-dark" : ""}.png`} alt="OurNetwork" width={200} height={80} priority />;
+  return (
+    <>
+      <Image src={`/assets/brand/OurNetwork.png`} alt="OurNetwork" width={width} height={height} priority className="block dark:hidden" />
+      <Image src={`/assets/brand/OurNetwork-dark.png`} alt="OurNetwork" width={width} height={height} priority className="hidden dark:block" />
+    </>
+  );
 };

@@ -23,7 +23,8 @@ export default function Mission() {
           <div className="mx-auto w-full h-[1px] bg-gray"></div>
           <div className="flex max-w-2xl text-left text-xl font-sans tracking-widest">The ON Ecosystem</div>
           <div className="flex px-4 py-4 md:px-16 md:py-12 justify-center">
-            <img src={`/assets/brand/ecosystem${theme === "dark" ? "-dark" : ""}.png`} alt={"on ecosystem"} />
+            <img src={`/assets/brand/ecosystem.png`} alt={"on ecosystem"} className="block dark:hidden" />
+            <img src={`/assets/brand/ecosystem-dark.png`} alt={"on ecosystem"} className="hidden dark:block" />
           </div>
         </div>
       </div>
