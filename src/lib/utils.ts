@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function cleanTitle(title: string) {
-  return title.split(":")[1].replace(/[^a-zA-Z0-9 ]/g, "");
+  return title.split(":")[1].replace(/[^a-zA-Z0-9 -]/g, "");
 }
 
 export function getONSeries(title: string) {
