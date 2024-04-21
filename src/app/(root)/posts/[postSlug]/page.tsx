@@ -1,4 +1,5 @@
 import { getPost } from "@/lib/content";
+import { convertToHumanReadableFormat } from "@/lib/utils";
 import styles from "@/styles/Post.module.css";
 
 export default async function Post({ params }) {
@@ -12,11 +13,12 @@ export default async function Post({ params }) {
   }
 
   return (
-    <main className="bg-white dark:bg-gray-900 font-sans">
+    <main className="font-sans">
       <div className={`${styles.container}`}>
         <article className={`${styles.article}`}>
           <h1>{post.title}</h1>
-          {/* add feature image */}
+          <div className="text-xl text-gray-300">{post.excerpt}</div>
+          <p className="text-xs">{convertToHumanReadableFormat(post.published_at)}</p>
           <img src={post.feature_image} alt={post.title} />
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
