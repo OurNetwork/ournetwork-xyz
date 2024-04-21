@@ -120,7 +120,10 @@ export default function Archives({ archives }: { archives: any[] }) {
               <div className="absolute bottom-0">
                 <Image src={color.block} alt="gradient blocks" width={300} height={32} priority />
               </div>
-              <div className="absolute bottom-0 text-center mx-auto text-gray dark:text-whiteEdgar font-extralight dark:font-light font-sans text-2xl" style={bottomPosition}>
+              <div
+                className="absolute bottom-0 text-center mx-auto text-gray dark:text-white font-extralight dark:font-light font-sans text-2xl dark:drop-shadow-[0_0px_1.8px_rgba(0,0,0,0.8)]"
+                style={bottomPosition}
+              >
                 <div>{archive.onSeries}</div>
               </div>
               <div className="px-2 pt-8">
@@ -148,9 +151,9 @@ export default function Archives({ archives }: { archives: any[] }) {
         })}
       </div>
       <div className="w-full block lg:hidden overflow-y-auto space-y-2">
-        <div className="mt-3 flex mb-3 align-center rounded-xl bg-zinc-50 p-2 w-full max-w-xl font-sans">
+        <div className="mt-3 flex mb-3 align-center rounded-xl bg-zinc-50 p-2 dark:bg-direWolf w-full font-sans">
           <MagnifyingGlassIcon className="h-5 w-5 my-auto text-gray-300" />
-          <input type="text" placeholder="Search" className="px-2 relative bg-zinc-50 rounded text-xl w-full focus:outline-none" onChange={handleSearch} />
+          <input type="text" placeholder="Search" className="px-2 relative bg-zinc-50 dark:bg-direWolf rounded text-xl w-full focus:outline-none" onChange={handleSearch} />
         </div>
         {filteredArchives.map((archive: any, index: number) => {
           let color = colorGradients[archive.editionNo % 5];

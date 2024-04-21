@@ -9,6 +9,7 @@ import { MenuIcon } from "lucide-react";
 import { CustomSubstackEmbed } from "./LeftSidebar";
 import { OurNetworkLogo } from "./OurNetworkLogo";
 import { XSocial } from "./XSocial";
+import { ThemeToggle } from "./ThemeToggle";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -39,17 +40,20 @@ const MobileNav = () => {
                 );
               })}
             </div>
-            <div className="flex items-center px-2 space-x-4">
-              <XSocial href="https://x.com/ournetwork__" size={6} />
-              {socialLinks.map((item) => {
-                return (
-                  <div key={item.label}>
-                    <Link href={item.url}>
-                      <Image src={item.icon} alt={item.label} width={30} height={30} />
-                    </Link>
-                  </div>
-                );
-              })}
+            <div className="flex w-full justify-between">
+              <div className="flex items-center px-2 space-x-4">
+                <XSocial href="https://x.com/ournetwork__" size={6} />
+                {socialLinks.map((item) => {
+                  return (
+                    <div key={item.label}>
+                      <Link href={item.url}>
+                        <Image src={item.icon} alt={item.label} width={30} height={30} />
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+              <ThemeToggle isMobile />
             </div>
           </div>
           <div className="relative bg-zinc-100 dark:bg-direWolf px-2 py-8 text-center text-gray dark:text-whiteEdgar">

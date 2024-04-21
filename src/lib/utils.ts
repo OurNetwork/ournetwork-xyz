@@ -54,8 +54,13 @@ export function getCoverageList(coverage: string) {
   return cleanedCoverageList;
 }
 
+// export function getArchiveURL(slug: string) {
+//   return `https://ournetwork.substack.com/p/${slug}`;
+// }
+
+// TEMPORARY
 export function getArchiveURL(slug: string) {
-  return `https://ournetwork.substack.com/p/${slug}`;
+  return `/posts/${slug}`;
 }
 
 export function convertDateFormat(dateString: string) {

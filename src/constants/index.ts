@@ -259,11 +259,11 @@ export const testimonials: Testimonials[] = [
     comment: "Our Network is a weekly staple for me to review the latest fundamentals for a never-ending rotation of important protocol sectors in crypto.",
   },
   {
-    name: "Mason Nystrom",
-    link: "https://x.com/masonnystrom",
-    company: "Variant Fund",
-    image: "/assets/testimonials/masonnystrom.jpeg",
-    comment: "The best newsletter for onchain alpha.",
+    name: "Katie Chase",
+    link: "https://www.linkedin.com/in/k-chase",
+    company: "Coin Metrics",
+    image: "/assets/testimonials/katiechase.jpeg",
+    comment: "OurNetwork goes deep into onchain metrics for an incredibly wide range of protocols and apps. Must read for anyone interested in mastering crypto data.",
   },
   {
     name: "Regan Bozman",
@@ -288,11 +288,11 @@ export const testimonials: Testimonials[] = [
     comment: "We’re now realizing the potential benefits of distributed research models for distributed networks.",
   },
   {
-    name: "Katie Chase",
-    link: "https://www.linkedin.com/in/k-chase",
-    company: "Coin Metrics",
-    image: "/assets/testimonials/katiechase.jpeg",
-    comment: "OurNetwork goes deep into onchain metrics for an incredibly wide range of protocols and apps. Must read for anyone interested in mastering crypto data.",
+    name: "Mason Nystrom",
+    link: "https://x.com/masonnystrom",
+    company: "Variant Fund",
+    image: "/assets/testimonials/masonnystrom.jpeg",
+    comment: "The best newsletter for onchain alpha.",
   },
   {
     name: "Andrew Hong",

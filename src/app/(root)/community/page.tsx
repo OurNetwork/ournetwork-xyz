@@ -1,14 +1,13 @@
 import { XSocial } from "@/components/shared/XSocial";
 import { readers, testimonials } from "@/constants";
 import { getContent } from "@/lib/content";
-import Image from "next/image";
 
 export default async function Community() {
   const { teamMembers } = await getContent();
 
   const Testimonial = ({ name, company, comment, image, link }) => {
     return (
-      <div key={name} className="flex flex-col justify-center space-y-2 text-lg py-6">
+      <div key={name} className="flex flex-col justify-center space-y-2 text-lg py-6 mt-2">
         <p className="font-medium font-sans tracking-widest md:pr-24">{`“${comment}“`}</p>
         <div className="flex space-x-6 items-center">
           <div className="flex">
@@ -48,7 +47,7 @@ export default async function Community() {
           <div className="mx-auto w-full h-[1px] bg-gray mt-8 mb-4"></div>
           <div className="w-full text-left text-xl font-sans tracking-widest">Testimonials</div>
           <div className=" gap-x-16 flex flex-col md:flex-row w-full">
-            <div className="flex-1 flex flex-col my-auto md:divide-y divide-slate-400">
+            <div className="flex-1 flex flex-col md:divide-y divide-slate-400">
               {testimonials.slice(0, 3).map((testimonial, idx) => (
                 <Testimonial {...testimonial} key={idx} />
               ))}

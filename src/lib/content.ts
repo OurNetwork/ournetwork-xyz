@@ -96,3 +96,9 @@ export const getContent = cache(async (): Promise<any> => {
 
   return { archives, teamMembers, contributorCalendar };
 });
+
+export const getPost = cache(async (slug: string): Promise<any> => {
+  return await ghostApi.posts.read({ slug }).catch((error) => {
+    console.error("Fetch error:", error);
+  });
+});
