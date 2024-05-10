@@ -1,4 +1,4 @@
-import { ColorSet, SidebarLink, SocialLink, Projects, Readers } from "@/types";
+import { ColorSet, SidebarLink, SocialLink, Projects, Readers, Testimonials } from "@/types";
 
 export const sidebarLinks: SidebarLink[] = [
   {
@@ -13,22 +13,21 @@ export const sidebarLinks: SidebarLink[] = [
     route: "/community",
     label: "Community",
   },
-  {
-    route: "/projects",
-    label: "Projects",
-  },
+  // {
+  //   route: "/projects",
+  //   label: "Projects",
+  // },
   {
     route: "/mission",
     label: "Mission",
   },
+  {
+    route: "/calendar",
+    label: "Calendar",
+  },
 ];
 
 export const socialLinks: SocialLink[] = [
-  {
-    label: "X",
-    url: "https://x.com/ournetwork__",
-    icon: "/assets/socials/x.webp",
-  },
   {
     label: "Zora",
     url: "https://zora.co/collect/zora:0xaa3d163986e495d13e37b9194961ed62d132ac50",
@@ -38,24 +37,24 @@ export const socialLinks: SocialLink[] = [
 
 export const colorGradients: ColorSet[] = [
   {
-    gradient: "/assets/blocks/gradient-1.webp",
-    block: "/assets/blocks/big-1.webp",
+    gradient: "/assets/blocks/gradient-1.png",
+    block: "/assets/blocks/big-1.png",
   },
   {
-    gradient: "/assets/blocks/gradient-2.webp",
-    block: "/assets/blocks/big-2.webp",
+    gradient: "/assets/blocks/gradient-2.png",
+    block: "/assets/blocks/big-2.png",
   },
   {
-    gradient: "/assets/blocks/gradient-3.webp",
-    block: "/assets/blocks/big-3.webp",
+    gradient: "/assets/blocks/gradient-3.png",
+    block: "/assets/blocks/big-3.png",
   },
   {
-    gradient: "/assets/blocks/gradient-4.webp",
-    block: "/assets/blocks/big-4.webp",
+    gradient: "/assets/blocks/gradient-4.png",
+    block: "/assets/blocks/big-4.png",
   },
   {
-    gradient: "/assets/blocks/gradient-5.webp",
-    block: "/assets/blocks/big-5.webp",
+    gradient: "/assets/blocks/gradient-5.png",
+    block: "/assets/blocks/big-5.png",
   },
 ];
 
@@ -243,6 +242,66 @@ export const readers: Readers[] = [
         logo: "/assets/logos/blockworks.webp",
       },
     ],
+  },
+];
+
+export const testimonials: Testimonials[] = [
+  {
+    name: "Chris Burniske",
+    link: "https://x.com/cburniske",
+    company: "Placeholder",
+    image: "/assets/testimonials/cburniske.jpeg",
+    comment: "Our Network is a weekly staple for me to review the latest fundamentals for a never-ending rotation of important protocol sectors in crypto.",
+  },
+  {
+    name: "Katie Chase",
+    link: "https://www.linkedin.com/in/k-chase",
+    company: "Coin Metrics",
+    image: "/assets/testimonials/katiechase.jpeg",
+    comment: "OurNetwork goes deep into onchain metrics for an incredibly wide range of protocols and apps. Must read for anyone interested in mastering crypto data.",
+  },
+  {
+    name: "Regan Bozman",
+    link: "https://x.com/reganbozman",
+    company: "Lattice Fund",
+    image: "/assets/testimonials/reganbozman.jpeg",
+    comment:
+      "The team at OurNetwork has collected some of the top mounds in crypto to cut through narrative and highlight what is working onchain. I’ve learned a ton contributing to the community.",
+  },
+  {
+    name: "Santiago Santos",
+    link: "https://x.com/santiagoroel",
+    company: "Angle Investor",
+    image: "/assets/testimonials/santiagosantos.jpeg",
+    comment: "OurNetwork is pure alpha",
+  },
+  {
+    name: "Richard Chen",
+    link: "https://x.com/richardchen39",
+    company: "1confirmation",
+    image: "/assets/testimonials/richardchen.jpeg",
+    comment: "The best newsletter for onchain data.",
+  },
+  {
+    name: "Lewis Harland",
+    link: "https://x.com/_lewisharland_",
+    company: "Re7 Capital",
+    image: "/assets/testimonials/lewisharland.jpeg",
+    comment: "We’re now realizing the potential benefits of distributed research models for distributed networks.",
+  },
+  {
+    name: "Mason Nystrom",
+    link: "https://x.com/masonnystrom",
+    company: "Variant Fund",
+    image: "/assets/testimonials/masonnystrom.jpeg",
+    comment: "The best newsletter for onchain alpha.",
+  },
+  {
+    name: "Andrew Hong",
+    link: "https://x.com/andrewhong5297",
+    company: "Crypto Data Bytes",
+    image: "/assets/testimonials/andrewhong.jpeg",
+    comment: "Top 5 crypto data trends of the week, written by top analysts across the ecosystem. Best place to find your alpha by far.",
   },
 ];
 

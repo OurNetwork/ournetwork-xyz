@@ -13,9 +13,9 @@ export const getLeaderboard = cache(async (): Promise<Contributor[]> => {
     .base(process.env.AIRTABLE_BASE_ID as string)
     .table(process.env.AIRTABLE_TABLE_ID as string)
     .select({
-      fields: ["Name", "Total Submissions", "Twitter handle", "Last Featured on"],
+      fields: ["Name", "Total Points", "Twitter handle", "Last Featured on"],
       sort: [
-        { field: "Total Submissions", direction: "desc" },
+        { field: "Total Points", direction: "desc" },
         { field: "Last Featured on", direction: "desc" },
       ],
     })
@@ -25,7 +25,7 @@ export const getLeaderboard = cache(async (): Promise<Contributor[]> => {
     .map((record) => {
       const name = typeof record.fields["Name"] === "string" ? record.fields["Name"] : "";
       const twitterHandle = typeof record.fields["Twitter handle"] === "string" ? record.fields["Twitter handle"] : "";
-      const totalSubmissions = typeof record.fields["Total Submissions"] === "number" ? record.fields["Total Submissions"] : 0;
+      const totalSubmissions = typeof record.fields["Total Points"] === "number" ? record.fields["Total Points"] : 0;
 
       const formattedTwitterHandle = twitterHandle ? twitterHandle.slice(1) : "";
 

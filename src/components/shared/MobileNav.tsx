@@ -7,6 +7,9 @@ import { sidebarLinks, socialLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { MenuIcon } from "lucide-react";
 import { CustomSubstackEmbed } from "./LeftSidebar";
+import { OurNetworkLogo } from "./OurNetworkLogo";
+import { XSocial } from "./XSocial";
+import { ThemeToggle } from "./ThemeToggle";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -14,16 +17,15 @@ const MobileNav = () => {
   return (
     <div className="lg:hidden flex justify-between px-4 py-5 shadow-lg">
       <Link href="/">
-        <Image src="/assets/brand/OurNetwork.webp" alt="OurNetwork" width={200} height={80} priority />
+        <OurNetworkLogo width={200} height={80} />
       </Link>
       <Sheet>
         <SheetTrigger asChild>
           <MenuIcon size={32} />
         </SheetTrigger>
-        <SheetContent side="left" className="border-none bg-white font-mono flex flex-col justify-between h-full">
+        <SheetContent side="left" className="border-none bg-white dark:bg-eerieBlack font-mono flex flex-col justify-between h-full">
           <div>
-            <Image src="/assets/brand/OurNetwork.webp" alt="OurNetwork" width={200} height={80} priority />
-
+            <OurNetworkLogo width={200} height={80} />
             <div className="pt-8 pb-4 mb-4 space-y-2 border-b-[2px]">
               {sidebarLinks.map((item) => {
                 const isActive = (pathname.includes(item.route) && item.route.length > 1) || pathname === item.route;
@@ -38,27 +40,31 @@ const MobileNav = () => {
                 );
               })}
             </div>
-            <div className="flex items-center px-2 space-x-4">
-              {socialLinks.map((item) => {
-                return (
-                  <div key={item.label}>
-                    <Link href={item.url}>
-                      <Image src={item.icon} alt={item.label} width={30} height={30} />
-                    </Link>
-                  </div>
-                );
-              })}
+            <div className="flex w-full justify-between">
+              <div className="flex items-center px-2 space-x-4">
+                <XSocial href="https://x.com/ournetwork__" size={6} />
+                {socialLinks.map((item) => {
+                  return (
+                    <div key={item.label}>
+                      <Link href={item.url}>
+                        <Image src={item.icon} alt={item.label} width={30} height={30} />
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+              <ThemeToggle isMobile />
             </div>
           </div>
-          <div className="relative bg-zinc-100 px-2 py-8 text-center text-gray">
+          <div className="relative bg-zinc-100 dark:bg-direWolf px-2 py-8 text-center text-gray dark:text-whiteEdgar">
             <div className="absolute left-0 bottom-1/2 px-4">
-              <Image src="/assets/blocks/small-1.webp" alt="green blocks" width={54} height={54} priority />
+              <Image src="/assets/blocks/small-1.png" alt="green blocks" width={54} height={54} priority />
             </div>
             <div className="absolute bottom-0 left-0 py-8 px-8">
-              <Image src="/assets/blocks/small-2.webp" alt="yellow blocks" width={84} height={51} priority />
+              <Image src="/assets/blocks/small-2.png" alt="yellow blocks" width={84} height={51} priority />
             </div>
             <div className="relative mb-4">
-              <div className="text-xl tracking-[0.2em] text-blue mb-4 lg:mb-6">Join OurNetwork</div>
+              <div className="text-xl tracking-[0.2em] text-blue dark:text-lightBlue mb-4 lg:mb-6">Join OurNetwork</div>
               <div className="lg:space-y-2 mb-4 lg:mb-14">
                 <div>{`The industry's leading onchain data newsletter.`}</div>
                 <div>By the Community.</div>

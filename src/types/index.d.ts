@@ -41,6 +41,11 @@ export interface TeamMember {
   x: string;
 }
 
+export interface ContributorCalendar {
+  title: string;
+  image: string;
+  date: string;
+}
 export interface Organization {
   name: string;
   logo: string;
@@ -49,4 +54,12 @@ export interface Organization {
 export interface Readers {
   label: string;
   organizations: Organization[];
+}
+
+export interface Testimonials {
+  name: string;
+  link: string;
+  company: string;
+  image: string;
+  comment: string;
 }
