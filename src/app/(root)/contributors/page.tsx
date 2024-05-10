@@ -1,4 +1,5 @@
 import { XSocial } from "@/components/shared/XSocial";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { getLeaderboard } from "@/lib/leaderboard";
 import { Contributor } from "@/types";
 import Image from "next/image";
@@ -35,6 +36,12 @@ export default async function Contributors() {
             </div>
             <div className="col-span-4 lg:col-span-6 flex justify-end lg:pr-28">
               <div className="w-56 text-center">OUR Points</div>
+              {/* <Popover>
+                <PopoverTrigger>
+                  <div className="w-56 text-center">OUR Points</div>
+                </PopoverTrigger>
+                <PopoverContent className="mt-4 mr-12 md:mr-36">Place content for the popover here.</PopoverContent>
+              </Popover> */}
             </div>
           </div>
           {/* table body */}
