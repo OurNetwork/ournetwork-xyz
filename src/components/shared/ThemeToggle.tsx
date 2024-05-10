@@ -11,7 +11,6 @@ export const ThemeToggle = ({ isMobile = false }) => {
 
   const handleCheckboxChange = () => {
     setIsDark(!isDark);
-    console.log("isDark", isDark);
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
