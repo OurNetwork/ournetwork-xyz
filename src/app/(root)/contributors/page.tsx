@@ -28,13 +28,13 @@ export default async function Contributors() {
         {/* table */}
         <div className="space-y-4">
           {/* table header */}
-          <div className="flex justify-between items-center py-3 bg-zinc-100 dark:bg-direWolf w-full grid grid-cols-12 text-xs md:text-sm lg:text-lg tracking-widest dark:text-lightBlue uppercase">
+          <div className="flex justify-between items-center py-3 bg-zinc-100 dark:bg-direWolf w-full grid grid-cols-12 text-xs md:text-sm lg:text-lg tracking-widest text-blue dark:text-lightBlue">
             <div className="col-span-2 lg:col-span-1 border-r border-r-[1px] border-blue dark:border-lightBlue text-center">RANK</div>
             <div className="col-span-6 lg:col-span-5 border-r border-r-[1px] border-blue dark:border-lightBlue flex justify-center lg:justify-end">
-              <div className="w-3/4 text-center lg:pr-24">Name</div>
+              <div className="w-3/4 text-center lg:pr-24">NAME</div>
             </div>
             <div className="col-span-4 lg:col-span-6 flex justify-end lg:pr-28">
-              <div className="w-56 text-center">Points</div>
+              <div className="w-56 text-center">OUR Points</div>
             </div>
           </div>
           {/* table body */}
