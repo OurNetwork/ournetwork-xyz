@@ -13,10 +13,10 @@ export const sidebarLinks: SidebarLink[] = [
     route: "/community",
     label: "Community",
   },
-  {
-    route: "/projects",
-    label: "Projects",
-  },
+  // {
+  //   route: "/projects",
+  //   label: "Projects",
+  // },
   {
     route: "/mission",
     label: "Mission",
@@ -28,11 +28,6 @@ export const sidebarLinks: SidebarLink[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  // {
-  //   label: "X",
-  //   url: "https://x.com/ournetwork__",
-  //   icon: "/assets/socials/x.webp",
-  // },
   {
     label: "Zora",
     url: "https://zora.co/collect/zora:0xaa3d163986e495d13e37b9194961ed62d132ac50",
