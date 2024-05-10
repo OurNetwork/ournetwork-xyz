@@ -7,7 +7,7 @@ export default async function Community() {
 
   const Testimonial = ({ name, company, comment, image, link }) => {
     return (
-      <div key={name} className="flex flex-col justify-center space-y-2 text-lg py-6 mt-2">
+      <div key={name} className="flex flex-col justify-center space-y-2 text-lg py-4 mt-2">
         <p className="font-medium font-sans tracking-widest md:pr-24">{`“${comment}“`}</p>
         <div className="flex space-x-6 items-center">
           <div className="flex">
@@ -28,7 +28,7 @@ export default async function Community() {
         {/* trusted by */}
         <div>
           <div className="w-full text-left text-xl font-sans tracking-widest">Trusted by Readers from</div>
-          <div className="my-5 py-5 grid w-full grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-y-12 lg:gap-4 bg-slate-100">
+          <div className="my-5 py-5 grid w-full grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-y-12 lg:gap-4 bg-slate-100 rounded-3xl border-lightBlue border-2">
             {readers.map((sectors) => {
               const organizations = sectors.organizations;
               return (
@@ -48,12 +48,12 @@ export default async function Community() {
           <div className="w-full text-left text-xl font-sans tracking-widest">Testimonials</div>
           <div className=" gap-x-16 flex flex-col md:flex-row w-full">
             <div className="flex-1 flex flex-col md:divide-y divide-slate-400">
-              {testimonials.slice(0, 3).map((testimonial, idx) => (
+              {testimonials.slice(0, 4).map((testimonial, idx) => (
                 <Testimonial {...testimonial} key={idx} />
               ))}
             </div>
             <div className="flex-1 flex flex-col md:ml-4 md:divide-y divide-slate-400">
-              {testimonials.slice(3).map((testimonial, idx) => (
+              {testimonials.slice(4).map((testimonial, idx) => (
                 <Testimonial {...testimonial} key={idx} />
               ))}
             </div>

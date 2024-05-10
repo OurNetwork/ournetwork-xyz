@@ -269,6 +269,13 @@ export const testimonials: Testimonials[] = [
       "The team at OurNetwork has collected some of the top mounds in crypto to cut through narrative and highlight what is working onchain. I’ve learned a ton contributing to the community.",
   },
   {
+    name: "Santiago Santos",
+    link: "https://x.com/santiagoroel",
+    company: "Angle Investor",
+    image: "/assets/testimonials/santiagosantos.jpeg",
+    comment: "OurNetwork is pure alpha",
+  },
+  {
     name: "Richard Chen",
     link: "https://x.com/richardchen39",
     company: "1confirmation",
