@@ -261,17 +261,16 @@ export const testimonials: Testimonials[] = [
     comment: "OurNetwork goes deep into onchain metrics for an incredibly wide range of protocols and apps. Must read for anyone interested in mastering crypto data.",
   },
   {
-    name: "Regan Bozman",
-    link: "https://x.com/reganbozman",
-    company: "Lattice Fund",
-    image: "/assets/testimonials/reganbozman.jpeg",
-    comment:
-      "The team at OurNetwork has collected some of the top mounds in crypto to cut through narrative and highlight what is working onchain. I’ve learned a ton contributing to the community.",
+    name: "Mason Nystrom",
+    link: "https://x.com/masonnystrom",
+    company: "Variant Fund",
+    image: "/assets/testimonials/masonnystrom.jpeg",
+    comment: "The best newsletter for onchain alpha.",
   },
   {
     name: "Santiago Santos",
     link: "https://x.com/santiagoroel",
-    company: "Angle Investor",
+    company: "Angel Investor",
     image: "/assets/testimonials/santiagosantos.jpeg",
     comment: "OurNetwork is pure alpha",
   },
@@ -290,11 +289,12 @@ export const testimonials: Testimonials[] = [
     comment: "We’re now realizing the potential benefits of distributed research models for distributed networks.",
   },
   {
-    name: "Mason Nystrom",
-    link: "https://x.com/masonnystrom",
-    company: "Variant Fund",
-    image: "/assets/testimonials/masonnystrom.jpeg",
-    comment: "The best newsletter for onchain alpha.",
+    name: "Regan Bozman",
+    link: "https://x.com/reganbozman",
+    company: "Lattice Fund",
+    image: "/assets/testimonials/reganbozman.jpeg",
+    comment:
+      "The team at OurNetwork has collected some of the top mounds in crypto to cut through narrative and highlight what is working onchain. I’ve learned a ton contributing to the community.",
   },
   {
     name: "Andrew Hong",
