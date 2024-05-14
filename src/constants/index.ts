@@ -270,7 +270,7 @@ export const testimonials: Testimonials[] = [
   {
     name: "Santiago Santos",
     link: "https://x.com/santiagoroel",
-    company: "Angel Investor",
+    company: "Angel | Co-Host of Empire",
     image: "/assets/testimonials/santiagosantos.jpeg",
     comment: "OurNetwork is pure alpha",
   },
