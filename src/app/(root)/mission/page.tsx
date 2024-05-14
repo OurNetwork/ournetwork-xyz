@@ -12,7 +12,7 @@ export default function Mission() {
       <div className="bg-zinc-100 dark:bg-direWolf min-h-full w-full py-8 flex flex-col justify-between font-light px-4 lg:px-16">
         {/* header and ecosystem diagram */}
         <div className="flex-col justify-center space-y-8">
-          <div className="mx-auto text-center max-w-4xl text-xl lg:text-3xl font-sans tracking-wider">Democratizing onchain information flow with community-powered research</div>
+          <div className="mx-auto text-center max-w-4xl text-xl lg:text-3xl font-sans tracking-wider">Distributed Research for Distributed Networks</div>
           <div className="mx-auto w-full h-[1px] bg-gray"></div>
           <div className="flex max-w-2xl text-left text-xl font-sans tracking-widest">Approach</div>
           <div className="w-full px-12 pb-6 space-y-6 text-justify font-sans tracking-wider text-lg md:text-xl">
