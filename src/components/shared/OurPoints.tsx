@@ -27,31 +27,10 @@ export const OurPoints = () => {
           <div className="space-y-2">
             <div>
               {`Points is our way of publicly tracking contributor participation in OurNetwork, letting analysts build an `}
-              <span className="font-semibold">onchain research</span>
-              {`. Here’s the breakdown:`}
+              <span className="font-semibold">onchain research reputation</span>
+              {`.`}
             </div>
-            <div className="ml-4">
-              <ul className="list-disc">
-                <li>
-                  {`Standard Issue Contribution: `}
-                  <span className="text-darkGreen dark:text-lightBlue">100 Points</span>
-                </li>
-                <li>
-                  {`Zoomed-In Series Contribution: `}
-                  <span className="text-darkGreen dark:text-lightBlue">250 Points</span>
-                </li>
-                <li>
-                  {`Monthly Contributor Survey Participation: `}
-                  <span className="text-darkGreen dark:text-lightBlue">25 Points</span>
-                </li>
-              </ul>
-            </div>
-            <div>{`Multipliers are awarded for more recent contributions.`}</div>
-            <div>
-              {`Formula: `}
-              <br />
-              <span className="text-darkGreen dark:text-lightBlue">{`({Standard Submission} * 100 + {Zoomed-In Issue} * 250 + {ON Survey} * 25) - ((YEAR(TODAY()) - YEAR({Last Featured on})) * 5 * {Total Submissions})`}</span>
-            </div>
+            <div>{`Multipliers are awarded based on number of contributions, type of contribution, and for more recent contributions.`}</div>
           </div>
         </PopoverContent>
       </Popover>
