@@ -1,7 +1,8 @@
+import { OurPoints } from "@/components/shared/OurPoints";
 import { XSocial } from "@/components/shared/XSocial";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { getLeaderboard } from "@/lib/leaderboard";
 import { Contributor } from "@/types";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,31 +18,27 @@ export default async function Contributors() {
         <div className="flex justify-between items-center px-4 py-4 lg:py-0">
           <div className="text-xl lg:text-3xl">Contributor Leaderboard</div>
           <Link
-            className="text-xs uppercase bg-lightBlue text-blue text-center px-6 py-1 rounded-xl tracking-wider shadow-lg hover:cursor-pointer"
+            className="text-xs bg-black text-white text-center px-6 py-3 rounded-xl tracking-wider shadow-lg hover:cursor-pointer relative border-2 border-black dark:border-white"
             target="_blank"
             href={process.env.CONTRIBUTOR_FORM as string}
             passHref={true}
           >
-            <div className="lg:text-xs font-semibold">Click Here</div>
-            <div className="lg:text-md font-light">Become a Contributor</div>
+            <div className="lg:text-md font-semibold">Become a Contributor</div>
+            <div className="absolute top-1 right-1">
+              <ArrowUpRightIcon className="text-white h-3 w-3 stroke-[8px]" />
+            </div>
           </Link>
         </div>
         {/* table */}
         <div className="space-y-4">
           {/* table header */}
-          <div className="flex justify-between items-center py-3 bg-zinc-100 dark:bg-direWolf w-full grid grid-cols-12 text-xs md:text-sm lg:text-lg tracking-widest text-blue dark:text-lightBlue">
-            <div className="col-span-2 lg:col-span-1 border-r border-r-[1px] border-blue dark:border-lightBlue text-center">RANK</div>
-            <div className="col-span-6 lg:col-span-5 border-r border-r-[1px] border-blue dark:border-lightBlue flex justify-center lg:justify-end">
+          <div className="flex justify-between items-center py-3 bg-zinc-100 dark:bg-direWolf w-full grid grid-cols-12 text-xs md:text-sm lg:text-lg tracking-widest text-darkGreen dark:text-lightBlue">
+            <div className="col-span-2 lg:col-span-1 border-r border-r-[1px] border-darkGreen dark:border-lightBlue text-center">RANK</div>
+            <div className="col-span-6 lg:col-span-5 border-r border-r-[1px] border-darkGreen dark:border-lightBlue flex justify-center lg:justify-end">
               <div className="w-3/4 text-center lg:pr-24">NAME</div>
             </div>
             <div className="col-span-4 lg:col-span-6 flex justify-end lg:pr-28">
-              <div className="w-56 text-center">OUR Points</div>
-              {/* <Popover>
-                <PopoverTrigger>
-                  <div className="w-56 text-center">OUR Points</div>
-                </PopoverTrigger>
-                <PopoverContent className="mt-4 mr-12 md:mr-36">Place content for the popover here.</PopoverContent>
-              </Popover> */}
+              <OurPoints />
             </div>
           </div>
           {/* table body */}
@@ -74,7 +71,7 @@ export default async function Contributors() {
 
                 return (
                   <div className="relative" key={index}>
-                    {tierLabel && <div className="absolute top-0 left-0 -mt-2 text-xs w-fit px-1 bg-zinc-100 dark:bg-direWolf text-blue dark:text-lightBlue">{tierLabel}</div>}
+                    {tierLabel && <div className="absolute top-0 left-0 -mt-2 text-xs w-fit px-1 bg-zinc-100 dark:bg-direWolf text-darkGreen dark:text-lightBlue">{tierLabel}</div>}
                     <div className="grid grid-cols-12 py-4 border-t-[0.5px] border-slate-400 dark:border-gray">
                       <div className="col-span-2 lg:col-span-1 text-center">{index + 1}</div>
                       <div className="col-span-6 lg:col-span-5 flex justify-end">

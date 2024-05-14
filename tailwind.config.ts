@@ -59,6 +59,9 @@ const config = {
         eerieBlack: "#1A1A1A",
         direWolf: "#282828",
         whiteEdgar: "#ededed",
+        pink: "#D737A9",
+        darkGreen: "#059F73",
+        darkLightBlue: "#05ABA9",
       },
       borderRadius: {
         lg: "var(--radius)",

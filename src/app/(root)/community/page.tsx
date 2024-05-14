@@ -10,11 +10,11 @@ export default async function Community() {
       <div key={name} className="flex flex-col justify-center space-y-2 text-lg py-4 mt-2">
         <p className="font-medium font-sans tracking-widest md:pr-24">{`“${comment}“`}</p>
         <div className="flex space-x-6 items-center">
-          <div className="flex">
+          <div className="flex text-lg">
             <a className="hover:cursor-pointer" target="_blank" href={link}>
-              <div className="text-lg text-blue dark:text-lightBlue font-sans hover:underline">{name}</div>
+              <div className="text-darkGreen dark:text-lightBlue font-sans hover:underline">{name}</div>
             </a>
-            <div className="text-md">{`, ${company}`}</div>
+            <div className="tracking-tighter">{`, ${company}`}</div>
           </div>
           <img src={image} alt={name} className="rounded-full h-12 w-12 lg:h-14 lg:w-14 mx-auto" />
         </div>
@@ -23,7 +23,10 @@ export default async function Community() {
   };
 
   return (
-    <div className="pb-4 lg:pb-8">
+    <div className="pb-4 lg:pb-8 space-y-4">
+      <div className="flex justify-between items-center px-4 py-4 lg:py-0">
+        <div className="text-xl lg:text-3xl">Community</div>
+      </div>
       <div className="bg-zinc-100 dark:bg-direWolf w-full py-8 flex flex-col justify-between font-light px-4 lg:px-16">
         {/* trusted by */}
         <div>
@@ -33,7 +36,7 @@ export default async function Community() {
               const organizations = sectors.organizations;
               return (
                 <div key={sectors.label} className="flex flex-col text-center space-y-2">
-                  <div className="text-lg text-blue font-sans">{sectors.label}</div>
+                  <div className="text-lg text-darkGreen font-sans">{sectors.label}</div>
                   {organizations.map((org) => {
                     return <img key={org.name} src={org.logo} alt={org.name} className="w-24 h-16 mx-auto object-scale-down" />;
                   })}
@@ -69,7 +72,7 @@ export default async function Community() {
                 <div key={member.name} className="relative flex flex-col jusity-center text-center space-y-6">
                   <img src={member.displayPicture} alt={member.name} className="rounded-full h-24 w-24 lg:h-32 lg:w-32 mx-auto" />
                   <div className="flex flex-col">
-                    <div className="text-lg lg:text-xl text-blue dark:text-lightBlue font-sans flex justify-center">
+                    <div className="text-lg lg:text-xl text-darkGreen dark:text-lightBlue font-sans flex justify-center">
                       {member.name}
                       <div className="ml-2 pt-1">
                         <XSocial href={`https://x.com/${member.x}`} size={3} />

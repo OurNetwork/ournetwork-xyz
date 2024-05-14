@@ -109,7 +109,7 @@ const LeftSidebar = () => {
           </div>
           {/* main container */}
           <div className="relative mb-4">
-            <div className="text-xl tracking-[0.2em] text-blue dark:text-lightBlue mb-4 lg:mb-6">Join OurNetwork</div>
+            <div className="text-xl tracking-[0.2em] text-darkGreen dark:text-lightBlue mb-4 lg:mb-6">Join OurNetwork</div>
             <div className="space-y-2 mb-4 lg:mb-14">
               <div>{`The industry's leading onchain data newsletter.`}</div>
               <div>By the Community.</div>

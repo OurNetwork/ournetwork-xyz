@@ -25,12 +25,12 @@ export default async function Projects() {
             <div className="text-lg lg:text-2xl font-medium">
               <div>Get Involved.</div>
               <div>
-                Reach out to be featured in an <span className="text-blue dark:text-lightBlue">Ecosystem Issue</span>.
+                Reach out to be featured in an <span className="text-darkGreen dark:text-lightBlue">Ecosystem Issue</span>.
               </div>
             </div>
             <div className="flex items-center justify-center">
               <Link
-                className="uppercase bg-lightBlue text-blue text-center px-8 py-2 rounded-xl tracking-wider shadow-lg hover:cursor-pointer"
+                className="uppercase bg-lightBlue text-darkGreen text-center px-8 py-2 rounded-xl tracking-wider shadow-lg hover:cursor-pointer"
                 target="_blank"
                 href={process.env.PROJECT_FORM as string}
                 passHref={true}
