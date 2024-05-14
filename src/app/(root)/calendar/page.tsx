@@ -17,7 +17,6 @@ export default async function Calendar() {
             href={process.env.CONTRIBUTOR_FORM as string}
             passHref={true}
           >
-            {/* <div className="lg:text-xs font-semibold">Click Here</div> */}
             <div className="lg:text-md font-semibold">Become a Contributor</div>
             <div className="absolute top-1 right-1">
               <ArrowUpRightIcon className="text-white h-3 w-3 stroke-[8px]" />
