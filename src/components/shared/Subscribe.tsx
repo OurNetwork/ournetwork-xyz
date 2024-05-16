@@ -13,15 +13,12 @@ export const Subscribe = () => {
   };
 
   const handleSubscribe = async () => {
-    console.log("HELLO");
     setIsInvalid(false);
     setError("An error has occured. Please enter a valid email.");
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (email.length > 0 && emailRegex.test(email)) {
       setIsLoading(true);
-      console.log("Subscribing..");
-      console.log("Email: ", email);
 
       const res = await fetch("/api/subscribe", {
         method: "POST",
@@ -31,7 +28,6 @@ export const Subscribe = () => {
         body: JSON.stringify({ email }),
       });
 
-      console.log("Response: ", res);
       const data = await res.json();
 
       if (!data.success) {
@@ -43,11 +39,11 @@ export const Subscribe = () => {
         setIsSuccess(true);
       }
     } else {
-      console.log("Invalid email");
       setIsInvalid(true);
     }
     setIsLoading(false);
   };
+
   return (
     <>
       <div className="text-right max-w-72 mx-auto">

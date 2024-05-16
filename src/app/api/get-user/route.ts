@@ -1,7 +1,7 @@
 import GhostAdminApi from "@tryghost/admin-api";
 
 export async function POST(request: Request) {
-  const { email } = await request.json();
+  const { uuid } = await request.json();
 
   try {
     const api = new GhostAdminApi({
@@ -10,20 +10,19 @@ export async function POST(request: Request) {
       version: "v5.0",
     });
 
-    const memberData = await api.members.browse({ filter: `email:${email}` });
+    const memberData = await api.members.browse({
+      filter: `uuid:'${uuid}'`,
+    });
 
     if (!memberData || !memberData[0]) throw new Error("Member not found.");
 
-    const data = await api.members.delete({
-      id: memberData[0].id,
-    });
-
     return Response.json({
       success: true,
-      email,
+      email: memberData[0].email,
     });
   } catch (error: any) {
     console.error(error);
-    return Response.json({ success: false, error: error.context || error.message, email });
+    let errorMsg = error.context || error.message || "An error has occured.";
+    return Response.json({ success: false, error: errorMsg, uuid });
   }
 }
