@@ -24,6 +24,12 @@ export async function POST(request: Request) {
     });
   } catch (error: any) {
     console.error(error);
-    return Response.json({ success: false, error: error.context || error.message, email });
+
+    let errorMsg = error.context || error.message;
+    if (error.type === "ValidationError") {
+      errorMsg = "Already subscribed!";
+    }
+
+    return Response.json({ success: false, error: errorMsg, email });
   }
 }

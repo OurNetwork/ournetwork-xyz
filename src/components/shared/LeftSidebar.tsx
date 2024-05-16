@@ -4,43 +4,13 @@ import { sidebarLinks, socialLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSearch } from "@/context/SearchContext";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { ThemeToggle } from "./ThemeToggle";
 import { XSocial } from "./XSocial";
 import { OurNetworkLogo } from "./OurNetworkLogo";
-
-export const CustomSubstackEmbed = ({ height = "100px" }) => {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // @ts-ignore
-      window.CustomSubstackWidget = {
-        substackUrl: "ournetwork.substack.com",
-        placeholder: "team@ournetwork.xyz",
-        buttonText: "Subscribe",
-        theme: "custom",
-        colors: {
-          primary: "#000000",
-          input: "#F8F8F8",
-          email: "#555555",
-          text: "#FFFFFF",
-        },
-      };
-
-      const script = document.createElement("script");
-      script.src = "https://substackapi.com/widget.js";
-      script.async = true;
-      document.body.appendChild(script);
-
-      return () => {
-        document.body.removeChild(script);
-      };
-    }
-  }, []);
-
-  return <div id="custom-substack-embed" style={{ height }}></div>;
-};
+import { Subscribe } from "./Subscribe";
 
 const LeftSidebar = () => {
   const pathname = usePathname();
@@ -116,7 +86,7 @@ const LeftSidebar = () => {
               <div>For the Community.</div>
             </div>
             <div className="px-2 h-[100px] font-extralight">
-              <CustomSubstackEmbed />
+              <Subscribe />
             </div>
           </div>
         </div>
