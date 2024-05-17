@@ -305,6 +305,33 @@ export const testimonials: Testimonials[] = [
   },
 ];
 
+export const teamMembers = [
+  {
+    name: "Spencer Noon",
+    displayPicture: "/assets/team/snoon.png",
+    position: "Founder & CEO",
+    x: "spencernoon",
+  },
+  {
+    name: "Cody Garrison",
+    displayPicture: "/assets/team/cody.jpeg",
+    position: "Chief of Staff",
+    x: "codygarrison_",
+  },
+  {
+    name: "Owen Fernau",
+    displayPicture: "/assets/team/owen.png",
+    position: "Editorial Ops",
+    x: "ofernau",
+  },
+  {
+    name: "Figo",
+    displayPicture: "/assets/team/figo.png",
+    position: "Engineering",
+    x: "mku_eth",
+  },
+];
+
 export const siteMetadata = {
   title: "OurNetwork - Crypto, NFT, DeFi & Web3 Analytics✨",
   description: "The Leading Onchain Analytics Newsletter & Community.",

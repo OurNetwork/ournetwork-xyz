@@ -1,9 +1,9 @@
 import { XSocial } from "@/components/shared/XSocial";
-import { readers, testimonials } from "@/constants";
+import { readers, testimonials, teamMembers } from "@/constants";
 import { getContent } from "@/lib/content";
 
 export default async function Community() {
-  const { teamMembers } = await getContent();
+  // const { teamMembers } = await getContent();
 
   const Testimonial = ({ name, company, comment, image, link }) => {
     return (
