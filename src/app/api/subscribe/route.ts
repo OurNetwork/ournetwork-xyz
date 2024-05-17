@@ -2,6 +2,7 @@ import GhostAdminApi from "@tryghost/admin-api";
 
 export async function POST(request: Request) {
   const { email } = await request.json();
+  console.log({ email });
 
   try {
     const api = new GhostAdminApi({
