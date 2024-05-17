@@ -294,7 +294,7 @@ export const testimonials: Testimonials[] = [
     company: "Lattice Fund",
     image: "/assets/testimonials/reganbozman.jpeg",
     comment:
-      "The team at OurNetwork has collected some of the top mounds in crypto to cut through narrative and highlight what is working onchain. I’ve learned a ton contributing to the community.",
+      "The team at OurNetwork has collected some of the top minds in crypto to cut through narrative and highlight what is working onchain. I’ve learned a ton contributing to the community.",
   },
   {
     name: "Andrew Hong",
