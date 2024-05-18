@@ -4,7 +4,6 @@ import { getContent } from "@/lib/content";
 
 export default async function Community() {
   const { teamMembers } = await getContent();
-  console.log({ teamMembers });
 
   const Testimonial = ({ name, company, comment, image, link }) => {
     return (

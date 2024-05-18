@@ -1,8 +1,8 @@
+import { sendWelcomeEmail } from "@/lib/onboarding";
 import GhostAdminApi from "@tryghost/admin-api";
 
 export async function POST(request: Request) {
   const { email } = await request.json();
-  console.log({ email });
 
   try {
     const api = new GhostAdminApi({
@@ -17,6 +17,8 @@ export async function POST(request: Request) {
     const data = await api.members.add(member, options);
 
     if (!data || !data.email) throw new Error("An error has occured.");
+
+    sendWelcomeEmail(email);
 
     return Response.json({
       success: true,
