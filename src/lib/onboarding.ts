@@ -12,7 +12,7 @@ const getLatestIssues = async () => {
 
   for (const issue of issuesRaw) {
     const title = issue.title as string;
-    const url = `https://ournetwork.substack.com/p/${issue.slug}`;
+    const url = `https://ournetwork.xyz/p/${issue.slug}`;
 
     issues.push({
       title,
@@ -29,6 +29,7 @@ export const sendWelcomeEmail = async (destinationEmail: string) => {
   try {
     // get top three most recent issues from ghost
     const issues = await getLatestIssues();
+    console.log({ issues });
 
     // send email with postmark
     await postmark.sendEmailWithTemplate({

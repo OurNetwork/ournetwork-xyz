@@ -1,4 +1,5 @@
 import GhostContentAPI from "@tryghost/content-api";
+import GhostAdminApi from "@tryghost/admin-api";
 
 export const ghostApi = new GhostContentAPI({
   url: process.env.GHOST_URL as string,
@@ -29,4 +30,10 @@ export const ghostApi = new GhostContentAPI({
         console.error("Fetch error:", error);
       });
   },
+});
+
+export const ghostAdminApi = new GhostAdminApi({
+  url: process.env.GHOST_URL as string,
+  key: process.env.GHOST_ADMIN_API_KEY as string,
+  version: "v5.0",
 });
