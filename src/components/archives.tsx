@@ -8,9 +8,9 @@ import { useSearch } from "@/context/SearchContext";
 import { useEffect, useState } from "react";
 import { MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { usePathname } from "next/navigation";
-import { CustomSubstackEmbed } from "./shared/LeftSidebar";
 import { motion, AnimatePresence } from "framer-motion";
 import { OurNetworkLogo } from "./shared/OurNetworkLogo";
+import { Subscribe } from "./shared/Subscribe";
 
 const VisitPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -54,7 +54,7 @@ const VisitPopup = () => {
                 <div className="mx-auto max-w-xl text-2xl lg:text-3xl tracking-widest font-light font-sans">OurNetwork - Crypto, NFT, DeFi & Web3 Analytics✨</div>
                 <div className="mx-auto max-w-md text-lg lg:text-xl tracking-tighter font-light ">The Leading Onchain Analytics Newsletter & Community.</div>
                 <div>
-                  <CustomSubstackEmbed height="50px" />
+                  <Subscribe />
                 </div>
                 <div className="uppercase text-xs hover:cursor-pointer hover:underline hover:underline-offset-8" onClick={closePopup}>
                   Let me read it first

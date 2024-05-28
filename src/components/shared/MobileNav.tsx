@@ -6,10 +6,10 @@ import Link from "next/link";
 import { sidebarLinks, socialLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { MenuIcon } from "lucide-react";
-import { CustomSubstackEmbed } from "./LeftSidebar";
 import { OurNetworkLogo } from "./OurNetworkLogo";
 import { XSocial } from "./XSocial";
 import { ThemeToggle } from "./ThemeToggle";
+import { Subscribe } from "./Subscribe";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -71,7 +71,7 @@ const MobileNav = () => {
                 <div>For the Community.</div>
               </div>
               <div className="px-2 h-[100px] font-extralight">
-                <CustomSubstackEmbed />
+                <Subscribe />
               </div>
             </div>
           </div>

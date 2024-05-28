@@ -14,15 +14,15 @@ const nextConfig = {
   },
   redirects: async () => {
     return [
-      {
-        source: "/p/:slug",
-        destination: "https://ournetwork.substack.com/p/:slug",
-        permanent: false,
-        basePath: false,
-      },
+      // {
+      //   source: "/p/:slug",
+      //   destination: "https://ournetwork.substack.com/p/:slug",
+      //   permanent: false,
+      //   basePath: false,
+      // },
       {
         source: "/latest",
-        destination: "https://ournetwork.substack.com",
+        destination: "https://ournetwork.xyz",
         permanent: false,
         basePath: false,
       },
