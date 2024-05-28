@@ -1,6 +1,25 @@
+import { siteMetadata } from "@/constants";
 import { getPost } from "@/lib/content";
 import { convertToHumanReadableFormat } from "@/lib/utils";
 import styles from "@/styles/Post.module.css";
+import type { Metadata, ResolvingMetadata } from "next";
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const postSlug = params.postSlug;
+  const post = await getPost(postSlug);
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      type: "website",
+      title: post.title,
+      description: post.excerpt,
+      siteName: siteMetadata.name,
+      images: [`${post.feature_image}`],
+    },
+  };
+}
 
 export default async function Post({ params }) {
   const postSlug = params.postSlug;

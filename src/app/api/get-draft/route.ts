@@ -2,7 +2,6 @@ import GhostAdminApi from "@tryghost/admin-api";
 
 export async function POST(request: Request) {
   const { slug } = await request.json();
-  console.log({ hi: slug });
 
   try {
     const api = new GhostAdminApi({
@@ -11,10 +10,7 @@ export async function POST(request: Request) {
       version: "v5.0",
     });
 
-    console.log({ api });
-
     const retrievedDraft = await api.posts.read({ id: slug }, { formats: ["html"] });
-    console.log({ retrievedDraft });
 
     if (!retrievedDraft || !retrievedDraft.id) throw new Error("Draft not found.");
 

@@ -22,7 +22,7 @@ const nextConfig = {
       // },
       {
         source: "/latest",
-        destination: "https://ournetwork.substack.com",
+        destination: "https://ournetwork.xyz",
         permanent: false,
         basePath: false,
       },

@@ -29,7 +29,6 @@ export const sendWelcomeEmail = async (destinationEmail: string) => {
   try {
     // get top three most recent issues from ghost
     const issues = await getLatestIssues();
-    console.log({ issues });
 
     // send email with postmark
     await postmark.sendEmailWithTemplate({
