@@ -72,6 +72,9 @@
   max-width: 100%; 
   height: auto;
   margin-bottom: 0rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .article figcaption {
@@ -79,4 +82,48 @@
   text-align: center; 
   margin-bottom: 1rem;
   opacity: 0.8;
+}
+
+.article pre {
+  margin-top: 2rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.article pre code {
+  background-color: transparent;
+  padding: 0; 
+  margin: 0;
+  font-size: inherit; 
+  color: inherit;
+}
+
+.article .kg-button-card a.kg-btn {
+  display: flex;
+  position: static;
+  align-items: center;
+  padding: 0 1.2em;
+  height: 2.4em;
+  line-height: 1em;
+  font-family: var(--font-family);
+  font-size: 0.95em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.article .kg-button-card a.kg-btn:hover {
+  opacity: 0.85;
+}
+
+.article .kg-button-card a.kg-btn-accent {
+  background-color: var(--accent-color);
+  color: #fff;
 }
