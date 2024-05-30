@@ -3,7 +3,7 @@ import { ghostApi } from "./ghost";
 
 const getLatestIssues = async () => {
   const issuesRaw = await ghostApi.posts.browse({
-    filter: "tags.slug:newsletter",
+    filter: "tags.name:Newsletter",
     fields: ["id", "title", "slug", "published_at", "primary_tag"],
     limit: 3,
   });
@@ -27,10 +27,12 @@ export const sendWelcomeEmail = async (destinationEmail: string) => {
   const postmark = new ServerClient(process.env.POSTMARK_SERVER_TOKEN as string);
 
   try {
-    // get top three most recent issues from ghost
+    console.log("Fetching latest issues from Ghost");
     const issues = await getLatestIssues();
+    console.log({ issues });
 
     // send email with postmark
+    console.log("Sending email with Postmark");
     await postmark.sendEmailWithTemplate({
       From: "cody@ournetwork.xyz",
       To: destinationEmail,
@@ -45,11 +47,12 @@ export const sendWelcomeEmail = async (destinationEmail: string) => {
       },
     });
 
+    console.log("Email sent successfully");
     return {
       success: true,
     };
   } catch (error: any) {
-    console.error(error);
+    console.error("Error in sendWelcomeEmail:", error);
     return {
       success: false,
     };
