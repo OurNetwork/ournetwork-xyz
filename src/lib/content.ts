@@ -21,7 +21,7 @@ export const getContent = cache(async (): Promise<any> => {
   let contributorCalendar: ContributorCalendar[] = [];
 
   for (const post of archivesRaw) {
-    if (post.primary_tag?.slug === "newsletter") {
+    if (post.primary_tag?.name === "Newsletter") {
       const title = cleanTitle(post.title as string);
       const coverageList = getCoverageList(post.excerpt as string);
       const onSeries = getONSeries(post.title as string);
