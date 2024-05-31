@@ -306,7 +306,7 @@ export const testimonials: Testimonials[] = [
 ];
 
 export const siteMetadata = {
-  title: "OurNetwork - Crypto, NFT, DeFi & Web3 Analytics✨",
+  title: "OurNetwork - Distributed Research for Distributed Networks",
   description: "The Leading Onchain Analytics Newsletter & Community.",
   baseUrl: "https://ournetwork.xyz",
   name: "OurNetwork",
