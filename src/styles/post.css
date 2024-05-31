@@ -373,11 +373,11 @@
 /* ---------------------------------------------------------- */
 
 .gh-content :not(.kg-card):not([id]) + .kg-card {
-  margin-top: 6vmin;
+  margin-top: 3vmin;
 }
 
 .gh-content .kg-card + :not(.kg-card) {
-  margin-top: 6vmin;
+  margin-top: 3vmin;
 }
 
 
