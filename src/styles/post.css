@@ -260,7 +260,7 @@
 .gh-canvas,
 .kg-width-full.kg-content-wide {
   --gap: 2vw;
-  --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+  --main: min(var(--content-width, 800px), 100% - var(--gap) * 2);
   --wide: minmax(
     0,
     calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2)
