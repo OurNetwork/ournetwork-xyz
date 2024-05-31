@@ -40,4 +40,6 @@
 .kg-button-card a.kg-btn-accent {
   background-color: #000000;
   color: #ffffff;
+  border-width: 1px;
+  border-color:#ffffff;
 }
