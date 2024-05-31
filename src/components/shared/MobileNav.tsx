@@ -74,6 +74,9 @@ const MobileNav = () => {
                 <Subscribe />
               </div>
             </div>
+            <a href="https://ournetwork.substack.com/disclosures" target="_blank" className="text-sm absolute left-0 bottom-0 p-2 text-gray dark:text-whiteEdgar hover:underline">
+              Disclosures
+            </a>
           </div>
         </SheetContent>
       </Sheet>
