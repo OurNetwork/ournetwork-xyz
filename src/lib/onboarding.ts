@@ -34,7 +34,7 @@ export const sendWelcomeEmail = async (destinationEmail: string) => {
     // send email with postmark
     console.log("Sending email with Postmark");
     await postmark.sendEmailWithTemplate({
-      From: "cody@ournetwork.xyz",
+      From: "team@ournetwork.xyz",
       To: destinationEmail,
       TemplateAlias: "ournetwork-welcome",
       TemplateModel: {
