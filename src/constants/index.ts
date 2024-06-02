@@ -251,7 +251,7 @@ export const testimonials: Testimonials[] = [
     link: "https://x.com/cburniske",
     company: "Placeholder",
     image: "/assets/testimonials/cburniske.jpeg",
-    comment: "Our Network is a weekly staple for me to review the latest fundamentals for a never-ending rotation of important protocol sectors in crypto.",
+    comment: "OurNetwork is a weekly staple for me to review the latest fundamentals for a never-ending rotation of important protocol sectors in crypto.",
   },
   {
     name: "Katie Chase",
