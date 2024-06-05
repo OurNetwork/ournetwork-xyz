@@ -78,12 +78,10 @@ const LeftSidebar = () => {
             <Image src="/assets/blocks/small-2.png" alt="yellow blocks" width={84} height={51} priority />
           </div>
           {/* main container */}
-          <div className="relative mb-4">
-            <div className="text-xl tracking-[0.2em] text-darkGreen dark:text-lightBlue mb-4 lg:mb-6">Join OurNetwork</div>
-            <div className="space-y-2 mb-4 lg:mb-14">
-              <div>{`The industry's leading onchain data newsletter.`}</div>
-              <div>By the Community.</div>
-              <div>For the Community.</div>
+          <div className="relative mb-4 ">
+            <div className="text-xl tracking-widest text-darkGreen dark:text-lightBlue mb-4 lg:mb-6">Join OurNetwork</div>
+            <div className="space-y-2 mb-4 lg:mb-14 text-left px-2">
+              <div className="dark:drop-shadow-[0_0px_1.8px_rgba(0,0,0,0.8)]">{`Get crypto's leading onchain data newsletter plus access to our new distributed research platform.`}</div>
             </div>
             <div className="px-2 h-[100px] font-extralight">
               <Subscribe />
