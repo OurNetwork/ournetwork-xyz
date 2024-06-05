@@ -294,7 +294,7 @@ export const testimonials: Testimonials[] = [
     company: "Lattice Fund",
     image: "/assets/testimonials/reganbozman.jpeg",
     comment:
-      "The team at OurNetwork has collected some of the top mounds in crypto to cut through narrative and highlight what is working onchain. I’ve learned a ton contributing to the community.",
+      "The team at OurNetwork has collected some of the top minds in crypto to cut through narrative and highlight what is working onchain. I’ve learned a ton contributing to the community.",
   },
   {
     name: "Andrew Hong",
@@ -305,8 +305,35 @@ export const testimonials: Testimonials[] = [
   },
 ];
 
+export const teamMembers = [
+  {
+    name: "Spencer Noon",
+    displayPicture: "/assets/team/snoon.png",
+    position: "Founder & CEO",
+    x: "spencernoon",
+  },
+  {
+    name: "Cody Garrison",
+    displayPicture: "/assets/team/cody.jpeg",
+    position: "Chief of Staff",
+    x: "codygarrison_",
+  },
+  {
+    name: "Owen Fernau",
+    displayPicture: "/assets/team/owen.png",
+    position: "Editorial Ops",
+    x: "ofernau",
+  },
+  {
+    name: "Figo",
+    displayPicture: "/assets/team/figo.png",
+    position: "Engineering",
+    x: "mku_eth",
+  },
+];
+
 export const siteMetadata = {
-  title: "OurNetwork - Crypto, NFT, DeFi & Web3 Analytics✨",
+  title: "OurNetwork - Distributed Research for Distributed Networks",
   description: "The Leading Onchain Analytics Newsletter & Community.",
   baseUrl: "https://ournetwork.xyz",
   name: "OurNetwork",

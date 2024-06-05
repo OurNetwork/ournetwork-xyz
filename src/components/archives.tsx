@@ -51,7 +51,7 @@ const VisitPopup = () => {
             </div>
             <div className="flex flex-col justify-center text-center w-full h-full z-50">
               <div className="space-y-8 justify-center">
-                <div className="mx-auto max-w-xl text-2xl lg:text-3xl tracking-widest font-light font-sans">OurNetwork - Crypto, NFT, DeFi & Web3 Analytics✨</div>
+                <div className="mx-auto max-w-xl text-2xl lg:text-3xl tracking-widest font-light font-sans">OurNetwork - Distributed Research for Distributed Networks</div>
                 <div className="mx-auto max-w-md text-lg lg:text-xl tracking-tighter font-light ">The Leading Onchain Analytics Newsletter & Community.</div>
                 <div>
                   <Subscribe />
