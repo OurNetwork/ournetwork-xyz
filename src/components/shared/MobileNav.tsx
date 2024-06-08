@@ -16,9 +16,7 @@ const MobileNav = () => {
 
   return (
     <div className="lg:hidden flex justify-between px-4 py-5 shadow-lg">
-      <Link href="/">
-        <OurNetworkLogo width={200} height={80} />
-      </Link>
+      <OurNetworkLogo width={200} height={80} />
       <Sheet>
         <SheetTrigger asChild>
           <MenuIcon size={32} />
@@ -72,7 +70,7 @@ const MobileNav = () => {
                 <Subscribe />
               </div>
             </div>
-            <a href="https://ournetwork.substack.com/disclosures" target="_blank" className="text-sm absolute left-0 bottom-0 p-2 text-gray dark:text-whiteEdgar hover:underline">
+            <a href="/disclosures" className="text-sm absolute left-0 bottom-0 p-2 text-gray dark:text-whiteEdgar hover:underline">
               Disclosures
             </a>
           </div>

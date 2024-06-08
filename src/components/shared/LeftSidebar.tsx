@@ -29,9 +29,7 @@ const LeftSidebar = () => {
       <div className="flex flex-col justify-between h-full">
         {/* top part */}
         <div>
-          <Link href="/">
-            <OurNetworkLogo width={288} height={80} />
-          </Link>
+          <OurNetworkLogo width={288} height={80} />
           <div className="pt-8 pb-4 mb-4 px-4 space-y-2 border-b-[2px] dark:border-gray">
             {sidebarLinks.map((item) => {
               const isActive = (pathname.includes(item.route) && item.route.length > 1) || pathname === item.route;
@@ -87,7 +85,7 @@ const LeftSidebar = () => {
               <Subscribe />
             </div>
           </div>
-          <a href="https://ournetwork.substack.com/disclosures" target="_blank" className="text-sm absolute left-0 bottom-0 p-2 text-gray dark:text-whiteEdgar hover:underline">
+          <a href="/disclosures" className="text-sm absolute left-0 bottom-0 p-2 text-gray dark:text-whiteEdgar hover:underline">
             Disclosures
           </a>
         </div>
