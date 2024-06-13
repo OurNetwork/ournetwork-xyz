@@ -18,6 +18,7 @@ import { convertToHumanReadableFormat } from "@/lib/utils";
 import { siteMetadata } from "@/constants";
 import type { Metadata } from "next";
 import { getPost } from "@/lib/content";
+import { Post } from "@/components/shared/Post";
 
 export async function generateMetadata({ params }): Promise<Metadata> {
   const postSlug = params.postSlug;
@@ -52,15 +53,7 @@ export default async function PostPage({ params }) {
 
   return (
     <div className="post-page font-sans max-w-7xl pt-8 pb-4">
-      <article className="gh-article-post">
-        <header className="gh-article-header gh-canvas pb-4 space-y-4">
-          {post.title && <h1>{post.title}</h1>}
-          {post.excerpt && <div className="text-xl text-gray-300">{post.excerpt}</div>}
-          {post.published_at && <p className="text-xs">{convertToHumanReadableFormat(post.published_at)}</p>}
-          {post.feature_image && <img src={post.feature_image} alt={post.title} />}
-        </header>
-        <section className="gh-content gh-canvas is-body" dangerouslySetInnerHTML={{ __html: post.html }}></section>
-      </article>
+      <Post post={post} />
     </div>
   );
 }
