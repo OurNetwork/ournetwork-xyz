@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { convertToHumanReadableFormat } from "@/lib/utils";
 import { LinkIcon } from "@heroicons/react/24/solid";
 import cheerio from "cheerio";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import toast, { Toaster } from "react-hot-toast";
 
 export const Post = ({ post }) => {
@@ -50,12 +50,10 @@ export const Post = ({ post }) => {
             <LinkIcon className="h-6 w-6 hover:bg-slate-200 rounded-full p-2" />
           </div>
         );
-        ReactDOM.render(linkIcon, icon);
+        ReactDOM.createRoot(icon).render(linkIcon);
       }
     });
   }, [enhancedHtml]);
-
-  const copied = () => toast("Link copied.");
 
   return (
     <article className="gh-article-post">
