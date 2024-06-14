@@ -11,8 +11,10 @@ export const Post = ({ post }) => {
     const $ = cheerio.load(htmlContent);
 
     $("h1, h2, h3, h4, h5, h6").each(function () {
-      const id = $(this).attr("id");
+      let id = $(this).attr("id");
       if (id) {
+        id = id.replace(/%[^-]*-?/g, "").replace(/-$/, "");
+        $(this).attr("id", id);
         $(this).wrap('<div class="header-wrapper"></div>');
         $(this).prepend(`
           <a href="#${id}" class="header-anchor" title="Copy link to this section">
