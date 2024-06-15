@@ -17,6 +17,7 @@ export const Post = ({ post }) => {
         $(this).attr("id", id);
         $(this).wrap('<div class="header-wrapper"></div>');
         $(this).prepend(`
+          <div class="header-hover-area"></div>
           <a href="#${id}" class="header-anchor" title="Copy link to this section">
             <span class="icon-placeholder"></span>
           </a>
@@ -48,8 +49,8 @@ export const Post = ({ post }) => {
         const icon = document.createElement("span");
         iconPlaceholder.replaceWith(icon);
         const linkIcon = (
-          <div className="!mr-8">
-            <LinkIcon className="h-6 w-6 hover:bg-slate-200 rounded-full p-2" />
+          <div className="!mr-6 group hidden md:block">
+            <LinkIcon className="h-6 w-6 group-hover:bg-slate-200 rounded-full p-2" />
           </div>
         );
         ReactDOM.createRoot(icon).render(linkIcon);
