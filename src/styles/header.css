@@ -241,6 +241,16 @@
   align-items: center;
 }
 
+.header-hover-area {
+  position: absolute;
+  left: -50px; 
+  right: -50px;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 0;
+}
+
 .header-anchor {
   position: absolute;
   left: -50px;
