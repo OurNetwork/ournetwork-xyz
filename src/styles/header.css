@@ -234,3 +234,25 @@
     font-size: 1em;
   }
 }
+
+.header-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-anchor {
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-wrapper:hover .header-anchor,
+.header-anchor:hover {
+  display: block;
+  cursor: pointer;
+}
