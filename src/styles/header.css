@@ -239,16 +239,17 @@
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .header-hover-area {
   position: absolute;
-  left: -50px; 
+  left: -50px;
   right: -50px;
   top: 0;
   bottom: 0;
   background-color: transparent;
-  z-index: 0;
+  z-index: -1;
 }
 
 .header-anchor {
@@ -259,6 +260,7 @@
   display: none;
   text-decoration: none;
   color: inherit;
+  z-index: 2;
 }
 
 .header-wrapper:hover .header-anchor,
