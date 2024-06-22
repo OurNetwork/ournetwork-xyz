@@ -1,10 +1,7 @@
 import { XSocial } from "@/components/shared/XSocial";
 import { readers, testimonials, teamMembers } from "@/constants";
-import { getContent } from "@/lib/content";
 
 export default async function Community() {
-  // const { teamMembers } = await getContent();
-
   const Testimonial = ({ name, company, comment, image, link }) => {
     return (
       <div key={name} className="flex flex-col justify-center space-y-2 text-lg py-4 mt-2">

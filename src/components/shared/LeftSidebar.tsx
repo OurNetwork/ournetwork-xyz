@@ -42,7 +42,7 @@ const LeftSidebar = () => {
               );
             })}
             {/* search bar */}
-            {pathname === "/" && (
+            {(pathname === "/" || pathname === "/contributors") && (
               <div className="mt-3 flex mb-3 align-center rounded-xl bg-zinc-50 dark:bg-direWolf p-2 w-full max-w-xl font-sans">
                 <MagnifyingGlassIcon className="h-5 w-5 my-auto text-gray-300" />
                 <input type="text" placeholder="Search" className="px-2 relative bg-zinc-50 dark:bg-direWolf rounded text-md w-full focus:outline-none" onChange={handleSearch} />
