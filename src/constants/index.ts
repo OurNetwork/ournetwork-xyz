@@ -30,7 +30,7 @@ export const sidebarLinks: SidebarLink[] = [
 export const socialLinks: SocialLink[] = [
   {
     label: "Zora",
-    url: "https://zora.co/collect/zora:0xaa3d163986e495d13e37b9194961ed62d132ac50",
+    url: "https://zora.co/@ournetwork",
     icon: "/assets/socials/zora.webp",
   },
 ];
