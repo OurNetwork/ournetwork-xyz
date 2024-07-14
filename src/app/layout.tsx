@@ -31,7 +31,12 @@ export const metadata: Metadata = {
     siteName: siteMetadata.name,
     images: [`${siteMetadata.baseUrl}/assets/og.jpg`],
   },
-  twitter: { card: "summary_large_image", title: siteMetadata.title, description: siteMetadata.description },
+  twitter: {
+    card: "summary_large_image",
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    images: [{ url: `${siteMetadata.baseUrl}/assets/og.jpg` }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
