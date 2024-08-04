@@ -6,13 +6,38 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function cleanTitle(title: string) {
-  return title.split(":")[1].replace(/[^a-zA-Z0-9 -]/g, "");
+  if (!title) {
+    console.error("Invalid title provided.");
+    return "";
+  }
+
+  const delimiter = title.includes(":") ? ":" : " ";
+  const parts = title.split(delimiter);
+
+  if (parts.length < 2) {
+    console.error("Title format is incorrect or missing parts.");
+    return "";
+  }
+
+  return parts[1].replace(/[^a-zA-Z0-9 -]/g, "").trim();
 }
 
 export function getONSeries(title: string) {
-  return title.split(":")[0];
-}
+  if (!title) {
+    console.error("Invalid title provided.");
+    return "";
+  }
 
+  const delimiter = title.includes(":") ? ":" : " ";
+  const parts = title.split(delimiter);
+
+  if (parts.length < 1) {
+    console.error("Title format is incorrect or missing parts.");
+    return "";
+  }
+
+  return parts[0].trim();
+}
 export function getCoverageList(coverage: string) {
   let startIndex;
   startIndex = coverage.toLowerCase().indexOf("coverage on");

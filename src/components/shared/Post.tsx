@@ -25,6 +25,8 @@ export const Post = ({ post }) => {
       }
     });
 
+    $("a").attr("target", "_blank");
+
     return $.html();
   };
 

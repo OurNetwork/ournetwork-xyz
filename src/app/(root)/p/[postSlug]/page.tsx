@@ -34,6 +34,12 @@ export async function generateMetadata({ params }): Promise<Metadata> {
       siteName: siteMetadata.name,
       images: [`${post.feature_image}`],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [`${post.feature_image}`],
+    },
   };
 }
 

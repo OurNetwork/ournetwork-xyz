@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
@@ -25,6 +26,7 @@
     "framer-motion": "^11.0.3",
     "lucide-react": "^0.307.0",
     "next": "14.0.4",
+    "next-sitemap": "^4.2.3",
     "next-themes": "^0.3.0",
     "postmark": "^4.0.2",
     "react": "^18",

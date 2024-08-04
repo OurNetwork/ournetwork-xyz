@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Disallow: /disclosures
+
+# *
+User-agent: *
+Disallow: /about
+
+# Host
+Host: https://www.ournetwork.xyz
+
+# Sitemaps
+Sitemap: https://www.ournetwork.xyz/sitemap.xml
