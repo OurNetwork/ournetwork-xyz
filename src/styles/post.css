@@ -2651,3 +2651,7 @@ figcaption strong {
 .gh-post-analytics-mentions .gh-dashboard-list-footer a {
   font-size: 1.3rem;
 }
+
+.custom-header {
+  margin-top: 1.3rem !important;
+}
