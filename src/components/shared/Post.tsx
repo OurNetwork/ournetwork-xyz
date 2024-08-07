@@ -17,7 +17,8 @@ export const Post = ({ post }) => {
           .text()
           .toLowerCase()
           .replace(/[^\w\s]/g, "")
-          .replace(/\s+/g, "-");
+          .replace(/\s+/g, "-")
+          .replace(/-+$/, "");
         $(this).attr("id", id);
       } else {
         id = id.replace(/%[^-]*-?/g, "").replace(/-$/, "");
