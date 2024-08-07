@@ -255,7 +255,7 @@
 .header-anchor {
   position: absolute;
   left: -50px;
-  top: 50%;
+  top: 63%;
   transform: translateY(-50%);
   display: none;
   text-decoration: none;
