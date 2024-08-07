@@ -13,15 +13,13 @@ export const Post = ({ post }) => {
     $("h1, h2, h3, h4, h5, h6").each(function () {
       let id = $(this).attr("id");
       if (!id) {
-        // Generate a new id from the text content
         id = $(this)
           .text()
           .toLowerCase()
-          .replace(/[^\w\s]/g, "") // Remove non-alphanumeric characters
-          .replace(/\s+/g, "-"); // Replace spaces with hyphens
+          .replace(/[^\w\s]/g, "")
+          .replace(/\s+/g, "-");
         $(this).attr("id", id);
       } else {
-        // Clean the existing id
         id = id.replace(/%[^-]*-?/g, "").replace(/-$/, "");
         $(this).attr("id", id);
       }
