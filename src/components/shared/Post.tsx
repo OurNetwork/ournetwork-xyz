@@ -12,17 +12,27 @@ export const Post = ({ post }) => {
 
     $("h1, h2, h3, h4, h5, h6").each(function () {
       let id = $(this).attr("id");
-      if (id) {
+      if (!id) {
+        // Generate a new id from the text content
+        id = $(this)
+          .text()
+          .toLowerCase()
+          .replace(/[^\w\s]/g, "") // Remove non-alphanumeric characters
+          .replace(/\s+/g, "-"); // Replace spaces with hyphens
+        $(this).attr("id", id);
+      } else {
+        // Clean the existing id
         id = id.replace(/%[^-]*-?/g, "").replace(/-$/, "");
         $(this).attr("id", id);
-        $(this).wrap('<div class="header-wrapper"></div>');
-        $(this).prepend(`
-          <div class="header-hover-area"></div>
-          <a href="#${id}" class="header-anchor" title="Copy link to this section">
-            <span class="icon-placeholder"></span>
-          </a>
-        `);
       }
+
+      $(this).wrap('<div class="header-wrapper"></div>');
+      $(this).prepend(`
+        <div class="header-hover-area"></div>
+        <a href="#${id}" class="header-anchor" title="Copy link to this section">
+          <span class="icon-placeholder"></span>
+        </a>
+      `);
     });
 
     $("a").attr("target", "_blank");
