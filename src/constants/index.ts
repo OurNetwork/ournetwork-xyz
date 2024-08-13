@@ -315,7 +315,7 @@ export const teamMembers = [
   {
     name: "Cody Garrison",
     displayPicture: "/assets/team/cody.jpeg",
-    position: "Chief of Staff",
+    position: "Chief Strategy Officer",
     x: "codygarrison_",
   },
   {
@@ -325,7 +325,13 @@ export const teamMembers = [
     x: "ofernau",
   },
   {
-    name: "Figo",
+    name: "Brandyn Hamilton",
+    displayPicture: "/assets/team/brandyn.jpg",
+    position: "Data Analyst",
+    x: "bhami628",
+  },
+  {
+    name: "Figo Saleh",
     displayPicture: "/assets/team/figo.png",
     position: "Engineering",
     x: "mku_eth",
