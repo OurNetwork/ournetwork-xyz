@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { OurNetworkLogo } from "./shared/OurNetworkLogo";
 import { Subscribe } from "./shared/Subscribe";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const VisitPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -74,9 +75,21 @@ const VisitPopup = () => {
 export default function Archives({ archives }: { archives: any[] }) {
   const { searchQuery, setSearchQuery } = useSearch();
   const pathname = usePathname();
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   const originalArchives = archives;
   const [filteredArchives, setFilteredArchives] = useState<any[]>(archives);
+
+  useEffect(() => {
+    const r = searchParams.get("r");
+    if (r) {
+      const match = r.match(/%2F(.+?)%2F/);
+      if (match) {
+        router.push(`/${match[1]}`);
+      }
+    }
+  }, [router, searchParams]);
 
   useEffect(() => {
     if (searchQuery.length > 0) {
@@ -102,85 +115,89 @@ export default function Archives({ archives }: { archives: any[] }) {
 
   return (
     <>
-      <VisitPopup />
-      <div className="hidden lg:block lg:flex lg:overflow-x-auto lg:space-x-4 h-full lg:w-[calc(100vw-324px)] overflow-y-hidden">
-        {filteredArchives.map((archive: any, index: number) => {
-          let color = colorGradients[archive.editionNo % 5];
-          let bottomPosition = index % 2 === 0 ? { bottom: "38px", left: "24px", right: "0" } : { bottom: "72px", left: "100px", right: "0" };
+      {!searchParams.get("r") && (
+        <>
+          <VisitPopup />
+          <div className="hidden lg:block lg:flex lg:overflow-x-auto lg:space-x-4 h-full lg:w-[calc(100vw-324px)] overflow-y-hidden">
+            {filteredArchives.map((archive: any, index: number) => {
+              let color = colorGradients[archive.editionNo % 5];
+              let bottomPosition = index % 2 === 0 ? { bottom: "38px", left: "24px", right: "0" } : { bottom: "72px", left: "100px", right: "0" };
 
-          return (
-            <a
-              key={index}
-              className="group bg-zinc-100 dark:bg-direWolf dark:bg-direWolf min-w-64 max-w-64 w-full relative transform hover:translate-y-2 transition duration-100"
-              href={getArchiveURL(archive.slug)}
-            >
-              <div className="absolute top-0">
-                <Image src={color.gradient} alt="gradient header" width={300} height={32} priority />
-              </div>
-              <div className="absolute bottom-0">
-                <Image src={color.block} alt="gradient blocks" width={300} height={32} priority />
-              </div>
-              <div
-                className="absolute bottom-0 text-center mx-auto text-gray dark:text-white font-extralight dark:font-light font-sans text-2xl dark:drop-shadow-[0_0px_1.8px_rgba(0,0,0,0.8)]"
-                style={bottomPosition}
-              >
-                <div>{archive.onSeries}</div>
-              </div>
-              <div className="px-2 pt-8">
-                <div className="space-y-10">
-                  <div className="text-center font-sans font-extralight space-y-6">
-                    <div className="text-4xl h-28">{archive.title}</div>
-                    <div className="text-sm">{archive.date}</div>
+              return (
+                <a
+                  key={index}
+                  className="group bg-zinc-100 dark:bg-direWolf dark:bg-direWolf min-w-64 max-w-64 w-full relative transform hover:translate-y-2 transition duration-100"
+                  href={getArchiveURL(archive.slug)}
+                >
+                  <div className="absolute top-0">
+                    <Image src={color.gradient} alt="gradient header" width={300} height={32} priority />
                   </div>
-                  <div className="px-6 space-y-4">
-                    <div className="text-sm font-light h-56">
-                      {archive.coverageList.map((item: string, index: number) => {
-                        return (
-                          <div className="ml-4 -indent-4" key={index}>
-                            {item}
-                          </div>
-                        );
-                      })}
-                    </div>
+                  <div className="absolute bottom-0">
+                    <Image src={color.block} alt="gradient blocks" width={300} height={32} priority />
                   </div>
-                  <div className="text-center font-light text-sm underline underline-offset-2 hover:cursor-pointer group-hover:font-normal">Read Issue</div>
-                </div>
-              </div>
-            </a>
-          );
-        })}
-      </div>
-      <div className="w-full block lg:hidden overflow-y-auto space-y-2">
-        <div className="mt-3 flex mb-3 align-center rounded-xl bg-zinc-50 p-2 dark:bg-direWolf w-full font-sans">
-          <MagnifyingGlassIcon className="h-5 w-5 my-auto text-gray-300" />
-          <input type="text" placeholder="Search" className="px-2 relative bg-zinc-50 dark:bg-direWolf rounded text-xl w-full focus:outline-none" onChange={handleSearch} />
-        </div>
-        {filteredArchives.map((archive: any, index: number) => {
-          let color = colorGradients[archive.editionNo % 5];
-
-          return (
-            <div key={index} className="bg-zinc-100 dark:bg-direWolf">
-              <a className="group w-full hover:shadow-xl bg-red-200" href={getArchiveURL(archive.slug)}>
-                <div className="absolute top-0 relative h-2">
-                  <LegacyImage src={color.gradient} alt="gradient header" layout="fill" priority />
-                </div>
-
-                <div className="px-2 pt-6 pb-2 relative">
-                  <div className="space-y-10">
-                    <div className="text-center font-sans font-extralight space-y-6">
-                      <div className="text-3xl">{archive.title}</div>
-                      <div className="text-sm">{archive.date}</div>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 right-0 text-gray dark:text-whiteEdgar font-sans font-extralight text-xl p-2">
+                  <div
+                    className="absolute bottom-0 text-center mx-auto text-gray dark:text-white font-extralight dark:font-light font-sans text-2xl dark:drop-shadow-[0_0px_1.8px_rgba(0,0,0,0.8)]"
+                    style={bottomPosition}
+                  >
                     <div>{archive.onSeries}</div>
                   </div>
-                </div>
-              </a>
+                  <div className="px-2 pt-8">
+                    <div className="space-y-10">
+                      <div className="text-center font-sans font-extralight space-y-6">
+                        <div className="text-4xl h-28">{archive.title}</div>
+                        <div className="text-sm">{archive.date}</div>
+                      </div>
+                      <div className="px-6 space-y-4">
+                        <div className="text-sm font-light h-56">
+                          {archive.coverageList.map((item: string, index: number) => {
+                            return (
+                              <div className="ml-4 -indent-4" key={index}>
+                                {item}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                      <div className="text-center font-light text-sm underline underline-offset-2 hover:cursor-pointer group-hover:font-normal">Read Issue</div>
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+          <div className="w-full block lg:hidden overflow-y-auto space-y-2">
+            <div className="mt-3 flex mb-3 align-center rounded-xl bg-zinc-50 p-2 dark:bg-direWolf w-full font-sans">
+              <MagnifyingGlassIcon className="h-5 w-5 my-auto text-gray-300" />
+              <input type="text" placeholder="Search" className="px-2 relative bg-zinc-50 dark:bg-direWolf rounded text-xl w-full focus:outline-none" onChange={handleSearch} />
             </div>
-          );
-        })}
-      </div>
+            {filteredArchives.map((archive: any, index: number) => {
+              let color = colorGradients[archive.editionNo % 5];
+
+              return (
+                <div key={index} className="bg-zinc-100 dark:bg-direWolf">
+                  <a className="group w-full hover:shadow-xl bg-red-200" href={getArchiveURL(archive.slug)}>
+                    <div className="absolute top-0 relative h-2">
+                      <LegacyImage src={color.gradient} alt="gradient header" layout="fill" priority />
+                    </div>
+
+                    <div className="px-2 pt-6 pb-2 relative">
+                      <div className="space-y-10">
+                        <div className="text-center font-sans font-extralight space-y-6">
+                          <div className="text-3xl">{archive.title}</div>
+                          <div className="text-sm">{archive.date}</div>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-0 right-0 text-gray dark:text-whiteEdgar font-sans font-extralight text-xl p-2">
+                        <div>{archive.onSeries}</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
     </>
   );
 }
