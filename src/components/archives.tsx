@@ -83,7 +83,6 @@ export default function Archives({ archives }: { archives: any[] }) {
 
   useEffect(() => {
     const r = searchParams.get("r");
-    console.log("r parameter:", r);
     if (r) {
       const match = r.match(/\/(.+)/);
       if (match) {
