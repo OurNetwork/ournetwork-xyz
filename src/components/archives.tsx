@@ -83,10 +83,15 @@ export default function Archives({ archives }: { archives: any[] }) {
 
   useEffect(() => {
     const r = searchParams.get("r");
+    console.log("r parameter:", r);
     if (r) {
-      const match = r.match(/%2F(.+?)%2F/);
+      const match = r.match(/\/(.+)/);
       if (match) {
-        router.push(`/${match[1]}`);
+        const path = match[1];
+        if (path.startsWith("on")) {
+          const query = searchParams.toString();
+          router.push(`/p/${path}`);
+        }
       }
     }
   }, [router, searchParams]);
