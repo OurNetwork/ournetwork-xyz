@@ -38,6 +38,7 @@ export function getONSeries(title: string) {
 
   return parts[0].trim();
 }
+
 export function getCoverageList(coverage: string) {
   let startIndex;
   startIndex = coverage.toLowerCase().indexOf("coverage on");
@@ -64,7 +65,10 @@ export function getCoverageList(coverage: string) {
   let cleanedCoverageList = coverageList.map((item) => item.replace(/\s+$/, ""));
 
   const lastItemIndex = cleanedCoverageList.length - 1;
-  cleanedCoverageList[lastItemIndex] = cleanedCoverageList[lastItemIndex].replace("and", "");
+  if (lastItemIndex > -1) {
+    // remove leading 'and ' or '& ' from the last item
+    cleanedCoverageList[lastItemIndex] = cleanedCoverageList[lastItemIndex].replace(/^(and|&)\s+/i, "");
+  }
 
   cleanedCoverageList = cleanedCoverageList.map((item) => item.trim());
 
@@ -72,7 +76,7 @@ export function getCoverageList(coverage: string) {
     cleanedCoverageList[i] = cleanedCoverageList[i].charAt(0).toUpperCase() + cleanedCoverageList[i].slice(1);
   }
 
-  if (lastItemIndex > -1 && cleanedCoverageList[lastItemIndex] === "More") {
+  if (lastItemIndex > -1 && cleanedCoverageList[lastItemIndex].toLowerCase() === "more") {
     cleanedCoverageList.pop();
   }
 
