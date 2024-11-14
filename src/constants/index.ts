@@ -313,12 +313,6 @@ export const teamMembers = [
     x: "spencernoon",
   },
   {
-    name: "Cody Garrison",
-    displayPicture: "/assets/team/cody.jpeg",
-    position: "Chief Strategy Officer",
-    x: "codygarrison_",
-  },
-  {
     name: "Owen Fernau",
     displayPicture: "/assets/team/owen.png",
     position: "Editorial Ops",
@@ -331,11 +325,29 @@ export const teamMembers = [
     x: "bhami628",
   },
   {
-    name: "Figo Saleh",
+    name: "Diego Cabral",
+    displayPicture: "/assets/team/diego.jpg",
+    position: "Community",
+    x: "0xTakeProfits",
+  },
+  {
+    name: "Nate Maddrey",
+    displayPicture: "/assets/team/nate.png",
+    position: "Research",
+    x: "natemaddrey",
+  },
+  {
+    name: "Figo",
     displayPicture: "/assets/team/figo.png",
     position: "Engineering",
     x: "mku_eth",
   },
+  // {
+  //   name: "Cody Garrison",
+  //   displayPicture: "/assets/team/cody.jpeg",
+  //   position: "Advisor",
+  //   x: "codygarrison_",
+  // },
 ];
 
 export const siteMetadata = {
