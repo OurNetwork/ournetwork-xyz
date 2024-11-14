@@ -24,7 +24,7 @@ export const getLeaderboard = cache(async (): Promise<Contributor[]> => {
   const leaderboard = records
     .map((record) => {
       const name = typeof record.fields["Name"] === "string" ? record.fields["Name"] : "";
-      const twitterHandle = typeof record.fields["Twitter handle"] === "string" ? record.fields["Twitter handle"] : "";
+      const twitterHandle = Array.isArray(record.fields["Twitter handle"]) && record.fields["Twitter handle"].length > 0 ? record.fields["Twitter handle"][0] : "";
       const totalSubmissions = typeof record.fields["Total Points"] === "number" ? record.fields["Total Points"] : 0;
 
       const formattedTwitterHandle = twitterHandle ? twitterHandle.slice(1) : "";
