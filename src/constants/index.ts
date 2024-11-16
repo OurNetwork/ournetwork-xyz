@@ -337,6 +337,12 @@ export const teamMembers = [
     x: "natemaddrey",
   },
   {
+    name: "Carly",
+    displayPicture: "/assets/team/carly.png",
+    position: "Marketing",
+    x: "carlyconsulting",
+  },
+  {
     name: "Figo",
     displayPicture: "/assets/team/figo.png",
     position: "Engineering",
