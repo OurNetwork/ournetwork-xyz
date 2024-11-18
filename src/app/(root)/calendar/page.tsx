@@ -24,7 +24,7 @@ export default async function Calendar() {
           </Link>
         </div>
         <div
-          className="bg-zinc-100dark:bg-direWolf bg-transparent w-full flex justify-center text-sm lg:text-lg tracking-widest px-1 overflow-y-auto"
+          className="bg-zinc-100 dark:bg-direWolf bg-transparent w-full flex justify-center text-sm lg:text-lg tracking-widest px-1 overflow-y-auto"
           style={{ maxHeight: "calc(100vh - 126px)" }}
         >
           <div className="w-full max-w-7xl h-full flex justify-center items-center">
