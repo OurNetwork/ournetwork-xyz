@@ -66,7 +66,7 @@ export default async function Community() {
           <div className="py-10 grid w-full sm:grid-cols-2 xl:grid-cols-5 gap-6">
             {teamMembers.map((member) => {
               return (
-                <div key={member.name} className="relative flex flex-col jusity-center text-center space-y-6">
+                <div key={member.name} className="relative flex flex-col justify-center text-center space-y-6">
                   <img src={member.displayPicture} alt={member.name} className="rounded-full h-24 w-24 lg:h-32 lg:w-32 mx-auto" />
                   <div className="flex flex-col">
                     <div className="text-lg lg:text-xl text-darkGreen dark:text-lightBlue font-sans flex justify-center">

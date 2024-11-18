@@ -66,7 +66,7 @@ const LeftSidebar = () => {
           </div>
         </div>
         {/* bottom part */}
-        <div className="relative bg-zinc-100 dark:bg-direWolf dark:bg-direWolf px-2 py-8 text-center text-gray dark:text-whiteEdgar">
+        <div className="relative bg-zinc-100 dark:bg-direWolf px-2 py-8 text-center text-gray dark:text-whiteEdgar">
           {/* img at the middle left */}
           <div className="absolute left-0 bottom-1/2 px-4">
             <Image src="/assets/blocks/small-1.png" alt="green blocks" width={54} height={54} priority />
