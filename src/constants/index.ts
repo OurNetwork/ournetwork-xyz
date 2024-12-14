@@ -342,12 +342,6 @@ export const teamMembers = [
     position: "Marketing",
     x: "carlyconsulting",
   },
-  {
-    name: "Figo",
-    displayPicture: "/assets/team/figo.png",
-    position: "Engineering",
-    x: "mku_eth",
-  },
   // {
   //   name: "Cody Garrison",
   //   displayPicture: "/assets/team/cody.jpeg",
